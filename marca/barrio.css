@@ -1,0 +1,100 @@
+/* Identidade visual Barrio Café e Bar — base comum de stories e posts */
+
+@font-face { font-family: "Fraunces"; font-weight: 600; src: url("fontes/fraunces-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-weight: 700; src: url("fontes/fraunces-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-weight: 900; src: url("fontes/fraunces-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-weight: 500; src: url("fontes/barlow-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-weight: 600; src: url("fontes/barlow-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-weight: 700; src: url("fontes/barlow-latin-700-normal.woff2") format("woff2"); }
+
+:root {
+  --mostarda: #d4a024;        /* cor principal */
+  --mostarda-escura: #b8861a; /* sombras e detalhes */
+  --mostarda-clara: #e6bb4f;
+  --marrom: #4a2a1a;          /* "BAR" do logo */
+  --marrom-medio: #7a4528;    /* "RIO" do logo */
+  --creme: #f6ecd6;
+  --titulo: "Fraunces", Georgia, serif;
+  --texto: "Barlow", "DejaVu Sans", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: var(--mostarda); }
+
+.peca {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 50% 35%, var(--mostarda-clara) 0%, var(--mostarda) 55%, var(--mostarda-escura) 100%);
+  color: var(--marrom);
+  font-family: var(--texto);
+}
+.story { width: 1080px; height: 1920px; }
+.post  { width: 1080px; height: 1350px; }
+
+/* textura sutil de pontos, para não ficar chapado */
+.peca::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(74, 42, 26, .07) 1.6px, transparent 1.8px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.logo { display: block; }
+
+.foto {
+  position: absolute;
+  overflow: hidden;
+  border: 12px solid var(--creme);
+  box-shadow: 0 24px 50px rgba(74, 42, 26, .35);
+}
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.selo {
+  position: absolute;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--marrom);
+  color: var(--creme);
+  font-family: var(--titulo);
+  font-weight: 900;
+  text-align: center;
+  line-height: .95;
+  box-shadow: 0 10px 24px rgba(74, 42, 26, .35);
+}
+
+.faixa {
+  position: absolute; left: 0; right: 0;
+  background: var(--marrom);
+  color: var(--creme);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600;
+  overflow: hidden;
+}
+.faixa::after { /* brilho que passa uma vez */
+  content: "";
+  position: absolute; top: 0; bottom: 0; width: 180px; left: -220px;
+  background: linear-gradient(100deg, transparent, rgba(246, 236, 214, .22), transparent);
+  animation: brilho .7s ease-in-out .8s both;
+}
+
+/* ---- Animações: tudo termina em até 1,5 s ---- */
+@keyframes sobe   { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+@keyframes surge  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoom   { from { transform: scale(1.12); } to { transform: scale(1); } }
+@keyframes carimbo {
+  0%   { opacity: 0; transform: scale(1.8) rotate(-14deg); }
+  70%  { opacity: 1; transform: scale(.94) rotate(-8deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-8deg); }
+}
+@keyframes brilho { from { left: -220px; } to { left: 110%; } }
+
+.a-sobe    { animation: sobe .45s cubic-bezier(.2, .8, .2, 1) both; }
+.a-surge   { animation: surge .35s ease-out both; }
+.a-zoom    { animation: zoom 1.5s cubic-bezier(.2, .7, .2, 1) both; }
+.a-carimbo { animation: carimbo .45s cubic-bezier(.3, 1.4, .5, 1) .35s both; }
+.d1 { animation-delay: .08s; }
+.d2 { animation-delay: .16s; }
+.d3 { animation-delay: .24s; }
