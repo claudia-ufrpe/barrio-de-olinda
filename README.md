@@ -3,11 +3,11 @@
 Peças para o Instagram do Barrio (Olinda-PE).
 
 ## Identidade visual
-- **Cores:** mostarda `#d4a024` (fundo), marrom `#4a2a1a` (títulos e faixa), marrom médio `#7a4528`, creme `#f6ecd6`.
-- **Fontes:** Fraunces (títulos) e Barlow (textos), em `marca/fontes`.
+- **Cores:** mostarda Dijon `#c7870f` (fundo), marrom `#4a2a1a` (títulos e faixa), marrom médio `#7a4528`, creme `#f6ecd6`.
+- **Fontes:** Fraunces (títulos) e Josefin Sans (textos), em `marca/fontes`.
 - **Base comum:** `marca/barrio.css`. Logo sem fundo em `marca/logo`.
 - **Formatos:** story 1080×1920, post 1080×1350 (4:5).
-- **Animação:** no máximo 1,5 s; a informação principal já fica legível nos primeiros 0,3 s. Depois disso a imagem fica parada.
+- **Animação:** suave, no máximo 1,5 s. Todo texto já aparece no primeiro quadro (nada começa invisível). Depois a imagem fica parada.
 - **Texto:** frases curtas, letra grande, linguagem direta.
 
 ## Como gerar
