@@ -3,7 +3,7 @@
 Peças para o Instagram do Barrio (Olinda-PE).
 
 ## Identidade visual
-- **Cores:** mostarda Dijon `#c7870f` (fundo), marrom `#4a2a1a` (títulos e faixa), marrom médio `#7a4528`, creme `#f6ecd6`, vermelho `#c4271c` (só nas estrelinhas `.estrela`).
+- **Cores:** mostarda viva `#e2a210` (fundo), marrom `#4a2a1a` (títulos e faixa), marrom médio `#7a4528`, creme `#f6ecd6`, vermelho `#c4271c` (só nas estrelinhas `.estrela`).
 - **Fontes:** Fraunces (títulos) e Josefin Sans (textos), em `marca/fontes`.
 - **Base comum:** `marca/barrio.css`. Logo sem fundo em `marca/logo`.
 - **Formatos:** story 1080×1920, post 1080×1350 (4:5).
@@ -18,3 +18,12 @@ npm run render -- pecas/2026-10-19-dobradinha
 Gera em `exportado/` um PNG (imagem final) e um MP4 de 6 s (animação + imagem parada) para cada `.html` da pasta.
 
 Para uma nova peça, copie uma pasta de `pecas/`, troque foto e textos e rode o comando.
+
+## Variar sempre
+O que fica fixo: cores, fontes, padrão de azulejo, logo e estrelinhas.
+O que muda de uma peça para outra: o layout e a frase de fechamento. Não repetir o mesmo layout nem o "Vem almoçar no Barrio" em dias seguidos.
+
+| Peça | Layout | Fechamento |
+|---|---|---|
+| 2026-10-19 dobradinha | foto em moldura no centro, faixa marrom embaixo | "Vem almoçar no Barrio" |
+| 2026-10-20 enquete | duas fotos cheias, faixa diagonal com espaço para a enquete | (sem faixa; enquete) |

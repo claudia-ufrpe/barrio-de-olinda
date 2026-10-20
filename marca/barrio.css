@@ -7,13 +7,14 @@
 @font-face { font-family: "Fraunces"; font-weight: 900; src: url("fontes/fraunces-latin-900-normal.woff2") format("woff2"); }
 
 :root {
-  --mostarda: #c7870f;        /* cor principal: mostarda tipo Dijon, mais encorpada */
-  --mostarda-escura: #8f5a08; /* sombras e detalhes */
-  --mostarda-clara: #e5aa2c;
+  --mostarda: #e2a210;        /* cor principal: mostarda viva */
+  --mostarda-escura: #b87a06; /* sombras e detalhes */
+  --mostarda-clara: #f7c535;
   --marrom: #4a2a1a;          /* "BAR" do logo */
   --marrom-medio: #7a4528;    /* "RIO" do logo */
   --creme: #f6ecd6;
   --vermelho: #c4271c;        /* estrelinhas e destaques pequenos */
+  --padrao: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='none' stroke='%23f6ecd6' stroke-opacity='.13' stroke-width='3'><path d='M60 10 110 60 60 110 10 60Z'/><circle cx='60' cy='60' r='16'/><path d='M0 0Q30 30 0 60M120 0Q90 30 120 60M0 60Q30 90 0 120M120 60Q90 90 120 120'/></g><g fill='%234a2a1a' fill-opacity='.16'><path d='M60 30 67 42H53Z'/><path d='M60 90 67 78H53Z'/><path d='M30 60 42 53V67Z'/><path d='M90 60 78 53V67Z'/><circle cx='0' cy='0' r='7'/><circle cx='120' cy='0' r='7'/><circle cx='0' cy='120' r='7'/><circle cx='120' cy='120' r='7'/></g></svg>");
   --titulo: "Fraunces", Georgia, serif;
   --texto: "Josefin Sans", "DejaVu Sans", sans-serif;
 }
@@ -37,7 +38,7 @@ html, body { background: var(--mostarda); }
 .peca::before {
   content: "";
   position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='none' stroke='%23f6ecd6' stroke-opacity='.13' stroke-width='3'><path d='M60 10 110 60 60 110 10 60Z'/><circle cx='60' cy='60' r='16'/><path d='M0 0Q30 30 0 60M120 0Q90 30 120 60M0 60Q30 90 0 120M120 60Q90 90 120 120'/></g><g fill='%234a2a1a' fill-opacity='.16'><path d='M60 30 67 42H53Z'/><path d='M60 90 67 78H53Z'/><path d='M30 60 42 53V67Z'/><path d='M90 60 78 53V67Z'/><circle cx='0' cy='0' r='7'/><circle cx='120' cy='0' r='7'/><circle cx='0' cy='120' r='7'/><circle cx='120' cy='120' r='7'/></g></svg>");
+  background-image: var(--padrao);
   background-size: 120px 120px;
   background-position: center top;
   pointer-events: none;
@@ -84,14 +85,14 @@ html, body { background: var(--mostarda); }
 /* estrelinha vermelha de destaque */
 .estrela {
   position: absolute;
-  width: 46px; height: 46px;
+  width: 60px; height: 60px;
   background: var(--vermelho);
   clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   filter: drop-shadow(0 3px 4px rgba(74, 42, 26, .3));
   animation: pisca 1.5s ease-in-out both;
 }
-.estrela.p { width: 30px; height: 30px; }
-.estrela.g { width: 64px; height: 64px; }
+.estrela.p { width: 40px; height: 40px; }
+.estrela.g { width: 84px; height: 84px; }
 
 /* ---- Animações ----
    Regra: tudo já aparece no primeiro quadro (nada começa invisível).

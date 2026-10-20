@@ -5,53 +5,63 @@
 <title>Story — Enquete do almoço</title>
 <link rel="stylesheet" href="../../marca/barrio.css">
 <style>
-  .logo { position: absolute; top: 180px; left: 50%; width: 150px; margin-left: -75px; }
-  .chamada { position: absolute; top: 380px; left: 0; right: 0; text-align: center; }
-  .chamada .pre { font: 600 54px/1 var(--texto); letter-spacing: 2px; color: var(--marrom-medio); }
-  .chamada h1 { font: 900 98px/1 var(--titulo); letter-spacing: -1px; margin-top: 14px; }
-  .foto { top: 620px; width: 470px; height: 570px; border-radius: 32px; }
-  .f1 { left: 45px; }  .f1 img { object-position: 80% 50%; }
-  .f2 { right: 45px; } .f2 img { object-position: 55% 50%; }
-  .ou { position: absolute; top: 835px; left: 50%; width: 140px; height: 140px; margin-left: -70px;
-        border-radius: 50%; background: var(--marrom); color: var(--creme); border: 8px solid var(--creme);
-        display: grid; place-items: center; font: 900 54px/1 var(--titulo);
-        box-shadow: 0 10px 24px rgba(74, 42, 26, .35); }
-  .nome { position: absolute; top: 1220px; width: 470px; text-align: center;
-          font: 900 58px/1.02 var(--titulo); }
-  .n1 { left: 45px; } .n2 { right: 45px; }
-  .vote { position: absolute; top: 1525px; left: 0; right: 0; text-align: center;
-          font: 700 48px/1 var(--texto); letter-spacing: 1px; color: var(--marrom); }
-  .faixa { top: 1370px; height: 104px; font-size: 48px; letter-spacing: 1px; }
+  /* Layout "metade e metade": duas fotos cheias cortadas por uma faixa diagonal */
+  .peca::before { z-index: 0; }
+  .metade { position: absolute; left: 0; width: 1080px; overflow: hidden; }
+  .metade img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .m1 { top: 0; height: 800px; }    .m1 img { object-position: 70% 60%; }
+  .m2 { top: 1200px; height: 720px; } .m2 img { object-position: 55% 45%; }
+
+  .diagonal { position: absolute; left: -60px; right: -60px; top: 650px; height: 660px;
+              transform: rotate(-6deg); overflow: hidden;
+              background: radial-gradient(70% 90% at 50% 50%, var(--mostarda-clara), var(--mostarda) 70%, var(--mostarda-escura));
+              border-top: 12px solid var(--creme); border-bottom: 12px solid var(--creme);
+              box-shadow: 0 20px 40px rgba(0, 0, 0, .35), 0 -20px 40px rgba(0, 0, 0, .25); }
+  .diagonal::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+  .pergunta { position: absolute; top: 720px; left: 0; right: 0; text-align: center; transform: rotate(-6deg); }
+  .pergunta .pre { font: 700 46px/1 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+  .pergunta h1 { font: 900 108px/1 var(--titulo); letter-spacing: -1px; margin-top: 16px; }
+  /* espaço livre para o adesivo de enquete do Instagram */
+  .enquete { position: absolute; top: 950px; left: 170px; width: 740px; height: 270px; border-radius: 28px;
+             background: rgba(246, 236, 214, .22); border: 4px solid rgba(246, 236, 214, .55); }
+
+  .etiqueta { position: absolute; background: var(--marrom); color: var(--creme);
+              font: 900 62px/1 var(--titulo); padding: 26px 40px 30px; border-radius: 22px;
+              border: 6px solid var(--creme); box-shadow: 0 12px 28px rgba(0, 0, 0, .4); }
+  .e1 { top: 470px; left: 50px; transform: rotate(-3deg); }
+  .e2 { top: 1420px; right: 50px; transform: rotate(2deg); }
+
+  .logo-selo { position: absolute; top: 200px; right: 50px; width: 190px; height: 190px; border-radius: 50%;
+               background: var(--mostarda); display: grid; place-items: center;
+               box-shadow: 0 10px 24px rgba(0, 0, 0, .35); }
+  .logo-selo img { width: 122px; }
 </style>
 </head>
 <body>
 <div class="peca story">
-  <img class="logo" src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar">
+  <div class="metade m1"><img class="a-zoom" src="../../fotos/bacalhau-ao-coco.jpg" alt=""></div>
+  <div class="metade m2"><img class="a-zoom" src="../../fotos/cupim-ao-molho-madeira.jpg" alt=""></div>
 
-  <div class="chamada">
-    <div class="pre a-sobe">PRO ALMOÇO</div>
-    <h1 class="a-sobe d1">Qual você prefere?</h1>
+  <div class="diagonal"></div>
+  <div class="pergunta">
+    <div class="pre">PRO ALMOÇO</div>
+    <h1 class="a-sobe">Qual vai ser?</h1>
   </div>
+  <div class="enquete"></div>
 
-  <div class="foto f1"><img class="a-zoom" src="../../fotos/bacalhau-ao-coco.jpg" alt=""></div>
-  <div class="foto f2"><img class="a-zoom" src="../../fotos/cupim-ao-molho-madeira.jpg" alt=""></div>
-  <div class="ou a-carimbo">ou</div>
+  <div class="etiqueta e1"><span class="a-sobe d1" style="display:block">Bacalhau ao coco</span></div>
+  <div class="etiqueta e2"><span class="a-sobe d2" style="display:block">Cupim ao molho madeira</span></div>
 
-  <div class="nome n1 a-sobe d2">Bacalhau<br>ao coco</div>
-  <div class="nome n2 a-sobe d2">Cupim ao<br>molho madeira</div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
 
-  <div class="vote a-sobe d3">Vote na enquete aqui embaixo</div>
-
-  <div class="faixa">Vem almoçar no Barrio</div>
-
-  <span class="estrela g" style="top: 360px; left: 80px;"></span>
-  <span class="estrela p d1" style="top: 300px; left: 190px;"></span>
-  <span class="estrela d2" style="top: 340px; right: 110px;"></span>
-  <span class="estrela p" style="top: 270px; right: 200px;"></span>
-  <span class="estrela p d3" style="top: 1255px; left: 525px;"></span>
-  <span class="estrela d1" style="top: 1515px; left: 60px;"></span>
-  <span class="estrela d3" style="top: 1515px; right: 60px;"></span>
-  <span class="estrela p d2" style="top: 590px; left: 20px;"></span>
+  <span class="estrela g" style="top: 445px; left: 30px;"></span>
+  <span class="estrela p d2" style="top: 560px; left: 640px;"></span>
+  <span class="estrela d1" style="top: 790px; left: 90px;"></span>
+  <span class="estrela p d3" style="top: 760px; right: 110px;"></span>
+  <span class="estrela d2" style="top: 1110px; left: 70px;"></span>
+  <span class="estrela p d1" style="top: 960px; right: 70px;"></span>
+  <span class="estrela g d1" style="top: 1405px; right: 25px;"></span>
+  <span class="estrela p" style="top: 1520px; left: 260px;"></span>
 </div>
 </body>
 </html>
