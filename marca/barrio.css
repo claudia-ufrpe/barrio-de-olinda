@@ -13,6 +13,7 @@
   --marrom: #4a2a1a;          /* "BAR" do logo */
   --marrom-medio: #7a4528;    /* "RIO" do logo */
   --creme: #f6ecd6;
+  --vermelho: #c4271c;        /* estrelinhas e destaques pequenos */
   --titulo: "Fraunces", Georgia, serif;
   --texto: "Josefin Sans", "DejaVu Sans", sans-serif;
 }
@@ -80,6 +81,18 @@ html, body { background: var(--mostarda); }
   animation: brilho 1.1s ease-in-out .4s both;
 }
 
+/* estrelinha vermelha de destaque */
+.estrela {
+  position: absolute;
+  width: 46px; height: 46px;
+  background: var(--vermelho);
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  filter: drop-shadow(0 3px 4px rgba(74, 42, 26, .3));
+  animation: pisca 1.5s ease-in-out both;
+}
+.estrela.p { width: 30px; height: 30px; }
+.estrela.g { width: 64px; height: 64px; }
+
 /* ---- Animações ----
    Regra: tudo já aparece no primeiro quadro (nada começa invisível).
    O movimento é suave e dura no máximo 1,5 s; depois a peça fica parada. */
@@ -87,6 +100,7 @@ html, body { background: var(--mostarda); }
 @keyframes zoom    { from { transform: scale(1.07); } to { transform: scale(1); } }
 @keyframes gira    { from { transform: scale(1.08) rotate(-16deg); } to { transform: scale(1) rotate(-8deg); } }
 @keyframes padrao  { from { background-position: center -40px; } to { background-position: center top; } }
+@keyframes pisca   { 0% { transform: scale(.75) rotate(-20deg); } 50% { transform: scale(1.2) rotate(8deg); } 100% { transform: none; } }
 @keyframes brilho  { from { left: -220px; } to { left: 110%; } }
 
 .peca::before { animation: padrao 1.5s ease-in-out both; }
