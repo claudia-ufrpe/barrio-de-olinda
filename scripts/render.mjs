@@ -7,7 +7,7 @@ import { join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const pasta = resolve(process.argv[2] ?? ".");
-const total = Number(process.argv[3] ?? 6);
+const total = Number(process.argv[3] ?? 15); // 15 s = duração de um story
 const FPS = 30;
 const ANIM = 1.5;
 const saida = join(pasta, "exportado");

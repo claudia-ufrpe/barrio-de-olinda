@@ -15,7 +15,7 @@ Peças para o Instagram do Barrio (Olinda-PE).
 npm install
 npm run render -- pecas/2026-10-19-dobradinha
 ```
-Gera em `exportado/` um PNG (imagem final) e um MP4 de 6 s (animação + imagem parada) para cada `.html` da pasta.
+Gera em `exportado/` um PNG (imagem final) e um MP4 de 15 s (duração de um story) (animação + imagem parada) para cada `.html` da pasta.
 
 Para uma nova peça, copie uma pasta de `pecas/`, troque foto e textos e rode o comando.
 
