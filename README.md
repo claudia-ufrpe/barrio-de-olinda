@@ -27,3 +27,5 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 |---|---|---|
 | 2026-10-19 dobradinha | foto em moldura no centro, faixa marrom embaixo | "Vem almoçar no Barrio" |
 | 2026-10-20 enquete | duas fotos cheias, faixa diagonal com espaço para a enquete | (sem faixa; enquete) |
+
+Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
