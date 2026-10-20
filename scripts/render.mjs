@@ -1,4 +1,4 @@
-// Gera PNG (quadro final) e MP4 (animação de 1,5 s + quadro parado) de cada peça.
+// Gera PNG (quadro após a entrada) e MP4 (entrada de 1,5 s + microanimações até o fim) de cada peça.
 // Uso: node scripts/render.mjs pecas/2026-10-19-dobradinha [segundos_totais]
 import { chromium } from "playwright";
 import { execFileSync } from "node:child_process";
@@ -27,16 +27,17 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
   const quadros = join(saida, `.${nome}-quadros`);
   rmSync(quadros, { recursive: true, force: true });
   mkdirSync(quadros);
-  const n = Math.round(ANIM * FPS);
-  for (let i = 0; i <= n; i++) {
-    await page.evaluate((t) => document.getAnimations().forEach((a) => (a.currentTime = t)), (i / FPS) * 1000);
-    await peca.screenshot({ path: join(quadros, `${String(i).padStart(4, "0")}.png`) });
+  const vai = (t) => page.evaluate((ms) => document.getAnimations().forEach((a) => (a.currentTime = ms)), t * 1000);
+  const n = Math.round(total * FPS);
+  for (let i = 0; i < n; i++) {
+    await vai(i / FPS);
+    await peca.screenshot({ path: join(quadros, `${String(i).padStart(4, "0")}.jpg`), type: "jpeg", quality: 95 });
   }
+  await vai(ANIM);
   await peca.screenshot({ path: join(saida, `${nome}.png`) });
 
   execFileSync("ffmpeg", [
-    "-y", "-loglevel", "error", "-framerate", String(FPS), "-i", join(quadros, "%04d.png"),
-    "-vf", `tpad=stop_mode=clone:stop_duration=${total - ANIM - 1 / FPS}`,
+    "-y", "-loglevel", "error", "-framerate", String(FPS), "-i", join(quadros, "%04d.jpg"),
     "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", "-movflags", "+faststart",
     join(saida, `${nome}.mp4`),
   ]);

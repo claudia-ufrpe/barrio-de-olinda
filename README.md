@@ -7,7 +7,7 @@ Peças para o Instagram do Barrio (Olinda-PE).
 - **Fontes:** Fraunces (títulos) e Josefin Sans (textos), em `marca/fontes`.
 - **Base comum:** `marca/barrio.css`. Logo sem fundo em `marca/logo`.
 - **Formatos:** story 1080×1920, post 1080×1350 (4:5).
-- **Animação:** suave, no máximo 1,5 s. Todo texto já aparece no primeiro quadro (nada começa invisível). Depois a imagem fica parada.
+- **Animação:** suave, no máximo 1,5 s. Todo texto já aparece no primeiro quadro (nada começa invisível). Depois seguem microanimações suaves até o fim (estrelas, foto, fundo, selo, brilho da faixa); o texto fica parado.
 - **Texto:** frases curtas, letra grande, linguagem direta.
 
 ## Como gerar

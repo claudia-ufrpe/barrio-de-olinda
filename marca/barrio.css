@@ -75,11 +75,11 @@ html, body { background: var(--mostarda); }
   font-weight: 600;
   overflow: hidden;
 }
-.faixa::after { /* brilho que passa uma vez */
+.faixa::after { /* brilho que passa de tempos em tempos */
   content: "";
   position: absolute; top: 0; bottom: 0; width: 180px; left: -220px;
   background: linear-gradient(100deg, transparent, rgba(246, 236, 214, .22), transparent);
-  animation: brilho 1.1s ease-in-out .4s both;
+  animation: brilho 4.5s ease-in-out .4s infinite;
 }
 
 /* estrelinha vermelha de destaque */
@@ -89,26 +89,40 @@ html, body { background: var(--mostarda); }
   background: var(--vermelho);
   clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   filter: drop-shadow(0 3px 4px rgba(74, 42, 26, .3));
-  animation: pisca 1.5s ease-in-out both;
+  animation: pisca 1.5s ease-in-out var(--d, 0s) both,
+             estrela-viva 2.8s ease-in-out calc(1.5s + var(--d, 0s)) infinite;
 }
+.estrela.p { animation-duration: 1.5s, 2.2s; }
+.estrela.g { animation-duration: 1.5s, 3.4s; }
 .estrela.p { width: 40px; height: 40px; }
 .estrela.g { width: 84px; height: 84px; }
 
 /* ---- Animações ----
-   Regra: tudo já aparece no primeiro quadro (nada começa invisível).
-   O movimento é suave e dura no máximo 1,5 s; depois a peça fica parada. */
+   Regras:
+   - tudo já aparece no primeiro quadro (nada começa invisível);
+   - a entrada dura no máximo 1,5 s;
+   - depois seguem só microanimações suaves até o fim do story (estrelas,
+     foto, fundo, selo, brilho da faixa). Texto fica parado para ler. */
 @keyframes desliza { from { transform: translateY(18px); } to { transform: none; } }
 @keyframes zoom    { from { transform: scale(1.07); } to { transform: scale(1); } }
+@keyframes respira { from { transform: scale(1); } to { transform: scale(1.06); } }
 @keyframes gira    { from { transform: scale(1.08) rotate(-16deg); } to { transform: scale(1) rotate(-8deg); } }
+@keyframes balanca { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(-3deg) scale(1.03); } }
 @keyframes padrao  { from { background-position: center -40px; } to { background-position: center top; } }
+@keyframes deriva  { from { background-position: center top; } to { background-position: center 120px; } }
 @keyframes pisca   { 0% { transform: scale(.75) rotate(-20deg); } 50% { transform: scale(1.2) rotate(8deg); } 100% { transform: none; } }
-@keyframes brilho  { from { left: -220px; } to { left: 110%; } }
+@keyframes estrela-viva {
+  0%, 100% { transform: scale(1) rotate(0); }
+  30%      { transform: scale(1.22) rotate(14deg); }
+  60%      { transform: scale(.92) rotate(-8deg); }
+}
+@keyframes brilho  { 0% { left: -220px; } 30%, 100% { left: 110%; } }
 
-.peca::before { animation: padrao 1.5s ease-in-out both; }
-.a-sobe    { animation: desliza 1.2s cubic-bezier(.25, .6, .3, 1) both; }
+.peca::before { animation: padrao 1.5s ease-in-out both, deriva 13.5s linear 1.5s forwards; }
+.a-sobe    { animation: desliza 1.2s cubic-bezier(.25, .6, .3, 1) var(--d, 0s) both; }
 .a-surge   { animation: none; }
-.a-zoom    { animation: zoom 1.5s ease-in-out both; }
-.a-carimbo { animation: gira 1.5s ease-in-out both; }
-.d1 { animation-delay: .1s; }
-.d2 { animation-delay: .2s; }
-.d3 { animation-delay: .3s; }
+.a-zoom    { animation: zoom 1.5s ease-in-out both, respira 13.5s linear 1.5s forwards; }
+.a-carimbo { animation: gira 1.5s ease-in-out both, balanca 3s ease-in-out 1.5s infinite; }
+.d1 { --d: .1s; }
+.d2 { --d: .2s; }
+.d3 { --d: .3s; }
