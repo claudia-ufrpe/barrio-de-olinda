@@ -5,72 +5,71 @@
 <title>WhatsApp — Dose tripla</title>
 <link rel="stylesheet" href="../../marca/barrio.css">
 <style>
-  /* Layout "vídeo + coluna": vídeo em pé à esquerda, informações em cartões à direita */
-  .data { position: absolute; top: 200px; left: 50px; background: var(--marrom); color: var(--creme);
-          font: 700 44px/1 var(--texto); letter-spacing: 2px; padding: 20px 30px 14px; border-radius: 16px; }
-  .chamada { position: absolute; top: 300px; left: 50px; }
-  .chamada .pre { font: 600 48px/1 var(--texto); color: var(--marrom-medio); }
-  .chamada h1 { font: 900 150px/1 var(--titulo); letter-spacing: -2px; margin-top: 4px; }
-  .quem { position: absolute; top: 512px; left: 50px; right: 50px; font: 600 44px/1.2 var(--texto); }
-  .quem b { font-weight: 700; }
+  /* Layout "vídeo em tela cheia": o vídeo ocupa tudo, texto só em duas peças por cima */
+  .peca::before { display: none; }
+  .tela { position: absolute; inset: 0; }
 
-  .logo-selo { position: absolute; top: 190px; right: 50px; width: 190px; height: 190px; border-radius: 50%;
+  .ingresso { position: absolute; top: 200px; left: 40px; padding: 18px 34px 22px; border-radius: 22px;
+              background: var(--mostarda); border: 6px solid var(--creme); text-align: center;
+              box-shadow: 0 14px 30px rgba(0, 0, 0, .45); }
+  .ingresso small { display: block; font: 700 40px/1 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+  .ingresso strong { display: block; font: 900 120px/1 var(--titulo); color: var(--marrom); }
+
+  .logo-selo { position: absolute; top: 205px; right: 40px; width: 170px; height: 170px; border-radius: 50%;
                background: var(--creme); display: grid; place-items: center;
-               box-shadow: 0 10px 24px rgba(74, 42, 26, .3); }
-  .logo-selo img { width: 124px; }
+               box-shadow: 0 10px 24px rgba(0, 0, 0, .45); }
+  .logo-selo img { width: 110px; }
 
-  .foto { top: 640px; left: 50px; width: 580px; height: 1013px; border-radius: 40px; }
-  .tela { width: 100%; height: 100%; border-radius: 28px; background: #2a1810; }
-
-  .cartao { position: absolute; left: 670px; width: 360px; border-radius: 28px; text-align: center;
-            box-shadow: 0 14px 30px rgba(74, 42, 26, .3); padding: 26px 10px 24px; }
-  .cartao small { display: block; font: 700 38px/1 var(--texto); letter-spacing: 1px; }
-  .cartao strong { display: block; font: 900 150px/1 var(--titulo); margin-top: 6px; }
-  .hora { top: 660px; background: var(--marrom); color: var(--creme); }
-  .couvert { top: 980px; background: var(--creme); color: var(--marrom); }
-  .couvert strong { font-size: 104px; margin-top: 12px; }
-  .onde { position: absolute; top: 1260px; left: 670px; width: 360px; text-align: center;
-          font: 700 40px/1.25 var(--texto); }
-  .onde .nome { font: 900 52px/1.05 var(--titulo); margin-bottom: 14px; }
+  .cartao { position: absolute; left: 40px; right: 40px; top: 1300px; border-radius: 30px; overflow: hidden;
+            background: radial-gradient(90% 120% at 50% 0%, var(--mostarda-clara), var(--mostarda) 60%, var(--mostarda-escura));
+            border: 6px solid var(--creme); box-shadow: 0 -10px 40px rgba(0, 0, 0, .45); }
+  .cartao::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+  .cartao .miolo { position: relative; padding: 30px 40px 26px; }
+  .cartao .pre { font: 700 36px/1 var(--texto); letter-spacing: 2px; color: var(--marrom-medio); }
+  .cartao h1 { font: 900 96px/1 var(--titulo); letter-spacing: -1px; margin-top: 12px; }
+  .dose { position: absolute; top: 1250px; right: 70px; background: var(--marrom); color: var(--creme);
+          font: 700 34px/1 var(--titulo); padding: 12px 20px 14px; border: 4px solid var(--creme); border-radius: 12px; transform: rotate(4deg); }
+  .cartao p { font: 600 40px/1.2 var(--texto); margin-top: 12px; }
+  .cartao p b { font-weight: 700; }
+  .rodape { position: relative; background: var(--marrom); color: var(--creme); text-align: center;
+            font: 700 36px/1 var(--texto); padding: 22px 10px 18px; letter-spacing: .5px; }
   /* ajustes para 1080x1350 */
   .whats { width: 1080px; height: 1350px; }
-  .data { top: 50px; }  .logo-selo { top: 40px; }
-  .chamada { top: 150px; } .chamada h1 { font-size: 92px; margin-top: 10px; } .quem { top: 400px; font-size: 40px; }
-  .dose { position: absolute; top: 58px; left: 645px; background: var(--marrom); color: var(--creme);
-          font: 700 32px/1 var(--titulo); padding: 10px 18px 12px; border-radius: 12px; transform: rotate(5deg); }
-  .foto { top: 470px; width: 520px; height: 820px; }
-  .cartao { left: 610px; width: 420px; }
-  .hora { top: 490px; } .couvert { top: 800px; }
-  .onde { top: 1040px; left: 610px; width: 420px; font-size: 38px; }
-  .onde .nome { font-size: 48px; margin-bottom: 10px; }
+  .tela { width: 100%; height: 100%; object-fit: cover; object-position: 50% 68%; }
+  .ingresso { top: 36px; left: 36px; } .ingresso strong { font-size: 104px; }
+  .logo-selo { top: 36px; right: 36px; width: 160px; height: 160px; } .logo-selo img { width: 104px; }
+  .cartao { top: 930px; left: 30px; right: 30px; }
+  .cartao .miolo { padding: 24px 36px 20px; }
+  .cartao .pre { font-size: 32px; }
+  .cartao h1 { font-size: 78px; margin-top: 8px; }
+  .cartao p { font-size: 36px; margin-top: 8px; }
+  .rodape { font-size: 30px; padding: 18px 10px 14px; }
+  .dose { top: 885px; right: 60px; font-size: 30px; }
 </style>
 </head>
 <body>
 <div class="peca whats" data-estatico>
-  <div class="data a-sobe">HOJE · QUINTA, 22/10</div>
-  <div class="chamada">
-    <div class="pre a-sobe d1">Pandeirada de aniversário triplo</div>
-    <h1 class="a-sobe d1">Ednardo Dali<br>Miguel Marinho</h1>
-  </div>
-  <div class="quem a-sobe d2">Aniversário dos dois e do <b>presidente Lula</b></div>
-  <div class="dose">Dose tripla</div>
+  <img class="tela" src="../../fotos/musica-2026-10-22-tela-cheia.png" alt="">
+
+  <div class="ingresso a-carimbo"><small>HOJE · 22/10</small><strong>19h</strong></div>
   <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
 
-  <div class="foto"><img src="../../fotos/musica-2026-10-22.png" alt=""></div>
+  <div class="cartao a-sobe">
+    <div class="miolo">
+      <div class="pre">PANDEIRADA DE ANIVERSÁRIO TRIPLO</div>
+      <h1>Ednardo Dali<br>Miguel Marinho</h1>
+      <p>Aniversário dos dois e do <b>presidente Lula</b></p>
+    </div>
+    <div class="rodape">Couvert R$ 20 · Av. Dr. Joaquim Nabuco, 5 · Varadouro</div>
+  </div>
 
-  <div class="cartao hora a-sobe d2"><small>A PARTIR DAS</small><strong>19h</strong></div>
-  <div class="cartao couvert a-sobe d3"><small>COUVERT</small><strong>R$ 20</strong></div>
-  <div class="onde a-sobe d3"><div class="nome">Barrio<br>Café e Bar</div>Av. Dr. Joaquim<br>Nabuco, 5<br>Varadouro, Olinda</div>
+  <div class="dose">Dose tripla</div>
 
-  <span class="estrela g" style="top: 205px; left: 720px;"></span>
-  <span class="estrela" style="top: 465px; left: 1000px;"></span>
-  <span class="estrela p" style="top: 775px; left: 585px;"></span>
-  <span class="estrela" style="top: 1030px; left: 1000px;"></span>
-  <span class="estrela g d2" style="top: 290px; left: 900px;"></span>
-  <span class="estrela p" style="top: 405px; left: 840px;"></span>
-  <span class="estrela d1" style="top: 455px; left: 20px;"></span>
-  <span class="estrela p d2" style="top: 1270px; left: 545px;"></span>
-  <span class="estrela p d3" style="top: 1290px; left: 1010px;"></span>
+  <span class="estrela g" style="top: 4px; left: 360px;"></span>
+  <span class="estrela p" style="top: 230px; left: 330px;"></span>
+  <span class="estrela" style="top: 190px; right: 30px;"></span>
+  <span class="estrela" style="top: 900px; left: 600px;"></span>
+  <span class="estrela p" style="top: 905px; left: 50px;"></span>
 </div>
 </body>
 </html>
