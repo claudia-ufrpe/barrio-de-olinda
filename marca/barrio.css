@@ -2,20 +2,21 @@
 
 @font-face { font-family: "Fraunces"; font-weight: 600; src: url("fontes/fraunces-latin-600-normal.woff2") format("woff2"); }
 @font-face { font-family: "Fraunces"; font-weight: 700; src: url("fontes/fraunces-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Josefin Sans"; font-weight: 600; src: url("fontes/josefin-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Josefin Sans"; font-weight: 700; src: url("fontes/josefin-sans-latin-700-normal.woff2") format("woff2"); }
 @font-face { font-family: "Fraunces"; font-weight: 900; src: url("fontes/fraunces-latin-900-normal.woff2") format("woff2"); }
-@font-face { font-family: "Barlow"; font-weight: 500; src: url("fontes/barlow-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "Barlow"; font-weight: 600; src: url("fontes/barlow-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Barlow"; font-weight: 700; src: url("fontes/barlow-latin-700-normal.woff2") format("woff2"); }
 
 :root {
-  --mostarda: #d4a024;        /* cor principal */
-  --mostarda-escura: #b8861a; /* sombras e detalhes */
-  --mostarda-clara: #e6bb4f;
+  --mostarda: #e2a210;        /* cor principal: mostarda viva */
+  --mostarda-escura: #b87a06; /* sombras e detalhes */
+  --mostarda-clara: #f7c535;
   --marrom: #4a2a1a;          /* "BAR" do logo */
   --marrom-medio: #7a4528;    /* "RIO" do logo */
   --creme: #f6ecd6;
+  --vermelho: #c4271c;        /* estrelinhas e destaques pequenos */
+  --padrao: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='none' stroke='%23f6ecd6' stroke-opacity='.13' stroke-width='3'><path d='M60 10 110 60 60 110 10 60Z'/><circle cx='60' cy='60' r='16'/><path d='M0 0Q30 30 0 60M120 0Q90 30 120 60M0 60Q30 90 0 120M120 60Q90 90 120 120'/></g><g fill='%234a2a1a' fill-opacity='.16'><path d='M60 30 67 42H53Z'/><path d='M60 90 67 78H53Z'/><path d='M30 60 42 53V67Z'/><path d='M90 60 78 53V67Z'/><circle cx='0' cy='0' r='7'/><circle cx='120' cy='0' r='7'/><circle cx='0' cy='120' r='7'/><circle cx='120' cy='120' r='7'/></g></svg>");
   --titulo: "Fraunces", Georgia, serif;
-  --texto: "Barlow", "DejaVu Sans", sans-serif;
+  --texto: "Josefin Sans", "DejaVu Sans", sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,19 +27,20 @@ html, body { background: var(--mostarda); }
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(120% 80% at 50% 35%, var(--mostarda-clara) 0%, var(--mostarda) 55%, var(--mostarda-escura) 100%);
+    radial-gradient(90% 60% at 50% 38%, var(--mostarda-clara) 0%, var(--mostarda) 60%, var(--mostarda-escura) 100%);
   color: var(--marrom);
   font-family: var(--texto);
 }
 .story { width: 1080px; height: 1920px; }
 .post  { width: 1080px; height: 1350px; }
 
-/* textura sutil de pontos, para não ficar chapado */
+/* padrão de azulejo (lembra os de Olinda) com os triângulos do logo */
 .peca::before {
   content: "";
   position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(74, 42, 26, .07) 1.6px, transparent 1.8px);
-  background-size: 26px 26px;
+  background-image: var(--padrao);
+  background-size: 120px 120px;
+  background-position: center top;
   pointer-events: none;
 }
 
@@ -73,28 +75,54 @@ html, body { background: var(--mostarda); }
   font-weight: 600;
   overflow: hidden;
 }
-.faixa::after { /* brilho que passa uma vez */
+.faixa::after { /* brilho que passa de tempos em tempos */
   content: "";
   position: absolute; top: 0; bottom: 0; width: 180px; left: -220px;
   background: linear-gradient(100deg, transparent, rgba(246, 236, 214, .22), transparent);
-  animation: brilho .7s ease-in-out .8s both;
+  animation: brilho 4.5s ease-in-out .4s infinite;
 }
 
-/* ---- Animações: tudo termina em até 1,5 s ---- */
-@keyframes sobe   { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
-@keyframes surge  { from { opacity: 0; } to { opacity: 1; } }
-@keyframes zoom   { from { transform: scale(1.12); } to { transform: scale(1); } }
-@keyframes carimbo {
-  0%   { opacity: 0; transform: scale(1.8) rotate(-14deg); }
-  70%  { opacity: 1; transform: scale(.94) rotate(-8deg); }
-  100% { opacity: 1; transform: scale(1) rotate(-8deg); }
+/* estrelinha vermelha de destaque */
+.estrela {
+  position: absolute;
+  width: 60px; height: 60px;
+  background: var(--vermelho);
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  filter: drop-shadow(0 3px 4px rgba(74, 42, 26, .3));
+  animation: pisca 1.5s ease-in-out var(--d, 0s) both,
+             estrela-viva 2.8s ease-in-out calc(1.5s + var(--d, 0s)) infinite;
 }
-@keyframes brilho { from { left: -220px; } to { left: 110%; } }
+.estrela.p { animation-duration: 1.5s, 2.2s; }
+.estrela.g { animation-duration: 1.5s, 3.4s; }
+.estrela.p { width: 40px; height: 40px; }
+.estrela.g { width: 84px; height: 84px; }
 
-.a-sobe    { animation: sobe .45s cubic-bezier(.2, .8, .2, 1) both; }
-.a-surge   { animation: surge .35s ease-out both; }
-.a-zoom    { animation: zoom 1.5s cubic-bezier(.2, .7, .2, 1) both; }
-.a-carimbo { animation: carimbo .45s cubic-bezier(.3, 1.4, .5, 1) .35s both; }
-.d1 { animation-delay: .08s; }
-.d2 { animation-delay: .16s; }
-.d3 { animation-delay: .24s; }
+/* ---- Animações ----
+   Regras:
+   - tudo já aparece no primeiro quadro (nada começa invisível);
+   - a entrada dura no máximo 1,5 s;
+   - depois seguem só microanimações suaves até o fim do story (estrelas,
+     foto, fundo, selo, brilho da faixa). Texto fica parado para ler. */
+@keyframes desliza { from { transform: translateY(18px); } to { transform: none; } }
+@keyframes zoom    { from { transform: scale(1.07); } to { transform: scale(1); } }
+@keyframes respira { from { transform: scale(1); } to { transform: scale(1.06); } }
+@keyframes gira    { from { transform: scale(1.08) rotate(-16deg); } to { transform: scale(1) rotate(-8deg); } }
+@keyframes balanca { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(-3deg) scale(1.03); } }
+@keyframes padrao  { from { background-position: center -40px; } to { background-position: center top; } }
+@keyframes deriva  { from { background-position: center top; } to { background-position: center 120px; } }
+@keyframes pisca   { 0% { transform: scale(.75) rotate(-20deg); } 50% { transform: scale(1.2) rotate(8deg); } 100% { transform: none; } }
+@keyframes estrela-viva {
+  0%, 100% { transform: scale(1) rotate(0); }
+  30%      { transform: scale(1.22) rotate(14deg); }
+  60%      { transform: scale(.92) rotate(-8deg); }
+}
+@keyframes brilho  { 0% { left: -220px; } 30%, 100% { left: 110%; } }
+
+.peca::before { animation: padrao 1.5s ease-in-out both, deriva 13.5s linear 1.5s forwards; }
+.a-sobe    { animation: desliza 1.2s cubic-bezier(.25, .6, .3, 1) var(--d, 0s) both; }
+.a-surge   { animation: none; }
+.a-zoom    { animation: zoom 1.5s ease-in-out both, respira 13.5s linear 1.5s forwards; }
+.a-carimbo { animation: gira 1.5s ease-in-out both, balanca 3s ease-in-out 1.5s infinite; }
+.d1 { --d: .1s; }
+.d2 { --d: .2s; }
+.d3 { --d: .3s; }
