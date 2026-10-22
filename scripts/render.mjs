@@ -2,6 +2,7 @@
 // Uso: node scripts/render.mjs pecas/2026-10-19-dobradinha [segundos_totais]
 // - .peca com data-estatico: gera só o PNG (ex.: post de WhatsApp).
 // - elemento com data-video="caminho.mp4": o vídeo é encaixado nesse espaço (com o áudio dele).
+//   Com data-atras, o vídeo fica atrás de tudo (texto e estrelas por cima).
 import { chromium } from "playwright";
 import { execFileSync } from "node:child_process";
 import { mkdirSync, rmSync, readdirSync } from "node:fs";
@@ -38,8 +39,10 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
   const videos = await page.$$eval("[data-video]", (els) => els.map((e) => {
     const r = e.getBoundingClientRect();
     return { src: e.dataset.video, x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height),
-             raio: parseFloat(getComputedStyle(e).borderTopLeftRadius) || 0 };
+             raio: parseFloat(getComputedStyle(e).borderTopLeftRadius) || 0, atras: e.hasAttribute("data-atras") };
   }));
+  const atras = videos.length && videos[0].atras;
+  if (atras) await page.addStyleTag({ content: "html, body, .peca { background: transparent !important; }" });
 
   const quadros = join(saida, `.${nome}-quadros`);
   rmSync(quadros, { recursive: true, force: true });
@@ -47,17 +50,31 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
   const n = Math.round(total * FPS);
   for (let i = 0; i < n; i++) {
     await vai(i / FPS);
-    await peca.screenshot({ path: join(quadros, `${String(i).padStart(4, "0")}.jpg`), type: "jpeg", quality: 95 });
+    const q = join(quadros, String(i).padStart(4, "0"));
+    if (atras) await peca.screenshot({ path: `${q}.png`, omitBackground: true });
+    else await peca.screenshot({ path: `${q}.jpg`, type: "jpeg", quality: 95 });
   }
   await vai(ANIM);
   await peca.screenshot({ path: join(saida, `${nome}.png`) });
 
   const mp4 = join(saida, `${nome}.mp4`);
-  execFileSync("ffmpeg", [
+  if (atras) {
+    const v = videos[0];
+    const filtro =
+      `[0:v]fps=${FPS},scale=${v.w}:${v.h}:force_original_aspect_ratio=increase,crop=${v.w}:${v.h},setsar=1,` +
+      `pad=${Math.round(width)}:${Math.round(height)}:${v.x}:${v.y}[v];[v][1:v]overlay=0:0:shortest=1,format=yuv420p[o]`;
+    execFileSync("ffmpeg", [
+      "-y", "-loglevel", "error", "-t", String(total), "-i", resolve(pasta, v.src),
+      "-framerate", String(FPS), "-i", join(quadros, "%04d.png"),
+      "-filter_complex", filtro, "-map", "[o]", "-map", "0:a?",
+      "-c:v", "libx264", "-crf", "16", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
+    ]);
+    execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-ss", String(ANIM), "-i", mp4, "-frames:v", "1", join(saida, `${nome}.png`)]);
+  } else execFileSync("ffmpeg", [
     "-y", "-loglevel", "error", "-framerate", String(FPS), "-i", join(quadros, "%04d.jpg"),
     "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", "-movflags", "+faststart", mp4,
   ]);
-  if (videos.length) {
+  if (videos.length && !atras) {
     const v = videos[0];
     const src = resolve(pasta, v.src);
     const base = join(quadros, "base.mp4");

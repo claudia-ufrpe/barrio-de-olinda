@@ -31,6 +31,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 |---|---|---|
 | 2026-10-19 dobradinha | foto em moldura no centro, faixa marrom embaixo | "Vem almoçar no Barrio" |
 | 2026-10-20 enquete | duas fotos cheias, faixa diagonal com espaço para a enquete | (sem faixa; enquete) |
-| 2026-10-22 dose tripla | vídeo em pé à esquerda, cartões de hora/couvert/endereço à direita (story + WhatsApp) | endereço do Barrio |
+| 2026-10-22 pandeirada | story: vídeo em tela cheia com etiqueta "Hoje 19h" e cartão embaixo; WhatsApp: foto em pé + cartões | couvert + endereço |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
