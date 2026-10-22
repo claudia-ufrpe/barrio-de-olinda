@@ -10,6 +10,10 @@ Peças para o Instagram do Barrio (Olinda-PE).
 - **Animação:** suave, no máximo 1,5 s. Todo texto já aparece no primeiro quadro (nada começa invisível). Depois seguem microanimações suaves até o fim (estrelas, foto, fundo, selo, brilho da faixa); o texto fica parado.
 - **Texto:** frases curtas, letra grande, linguagem direta.
 
+## Vídeo da casa dentro da peça
+Um elemento com `data-video="../../videos/arquivo.mp4"` recebe o vídeo (com áudio), com cantos arredondados. Corte o trecho antes em `videos/` com 15 s.
+Peça com `data-estatico` na `.peca` (ex.: WhatsApp) gera só a imagem.
+
 ## Como gerar
 ```
 npm install
@@ -27,5 +31,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 |---|---|---|
 | 2026-10-19 dobradinha | foto em moldura no centro, faixa marrom embaixo | "Vem almoçar no Barrio" |
 | 2026-10-20 enquete | duas fotos cheias, faixa diagonal com espaço para a enquete | (sem faixa; enquete) |
+| 2026-10-22 dose tripla | vídeo em pé à esquerda, cartões de hora/couvert/endereço à direita (story + WhatsApp) | endereço do Barrio |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Story — Dose tripla</title>
+<link rel="stylesheet" href="../../marca/barrio.css">
+<style>
+  /* Layout "vídeo + coluna": vídeo em pé à esquerda, informações em cartões à direita */
+  .data { position: absolute; top: 200px; left: 50px; background: var(--marrom); color: var(--creme);
+          font: 700 44px/1 var(--texto); letter-spacing: 2px; padding: 20px 30px 14px; border-radius: 16px; }
+  .chamada { position: absolute; top: 300px; left: 50px; }
+  .chamada .pre { font: 600 48px/1 var(--texto); color: var(--marrom-medio); }
+  .chamada h1 { font: 900 150px/1 var(--titulo); letter-spacing: -2px; margin-top: 4px; }
+  .quem { position: absolute; top: 512px; left: 50px; right: 50px; font: 600 44px/1.2 var(--texto); }
+  .quem b { font-weight: 700; }
+
+  .logo-selo { position: absolute; top: 190px; right: 50px; width: 190px; height: 190px; border-radius: 50%;
+               background: var(--creme); display: grid; place-items: center;
+               box-shadow: 0 10px 24px rgba(74, 42, 26, .3); }
+  .logo-selo img { width: 124px; }
+
+  .foto { top: 640px; left: 50px; width: 580px; height: 1013px; border-radius: 40px; }
+  .tela { width: 100%; height: 100%; border-radius: 28px; background: #2a1810; }
+
+  .cartao { position: absolute; left: 670px; width: 360px; border-radius: 28px; text-align: center;
+            box-shadow: 0 14px 30px rgba(74, 42, 26, .3); padding: 26px 10px 24px; }
+  .cartao small { display: block; font: 700 38px/1 var(--texto); letter-spacing: 1px; }
+  .cartao strong { display: block; font: 900 150px/1 var(--titulo); margin-top: 6px; }
+  .hora { top: 660px; background: var(--marrom); color: var(--creme); }
+  .couvert { top: 980px; background: var(--creme); color: var(--marrom); }
+  .couvert strong { font-size: 104px; margin-top: 12px; }
+  .onde { position: absolute; top: 1260px; left: 670px; width: 360px; text-align: center;
+          font: 700 40px/1.25 var(--texto); }
+  .onde .nome { font: 900 52px/1.05 var(--titulo); margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<div class="peca story">
+  <div class="data a-sobe">HOJE · QUINTA, 22/10</div>
+  <div class="chamada">
+    <div class="pre a-sobe d1">Uma celebração em</div>
+    <h1 class="a-sobe d1">Dose tripla</h1>
+  </div>
+  <div class="quem a-sobe d2">Aniversários de <b>Ednardo</b>, <b>Miguel</b> e do <b>presidente Lula</b></div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
+
+  <div class="foto"><div class="tela" data-video="../../videos/musica-2026-10-22.mp4"></div></div>
+
+  <div class="cartao hora a-sobe d2"><small>A PARTIR DAS</small><strong>19h</strong></div>
+  <div class="cartao couvert a-sobe d3"><small>COUVERT</small><strong>R$ 20</strong></div>
+  <div class="onde a-sobe d3"><div class="nome">Barrio<br>Café e Bar</div>Av. Dr. Joaquim<br>Nabuco, 5<br>Varadouro, Olinda</div>
+
+  <span class="estrela g" style="top: 285px; left: 660px;"></span>
+  <span class="estrela p d2" style="top: 330px; left: 600px;"></span>
+  <span class="estrela d1" style="top: 630px; left: 1000px;"></span>
+  <span class="estrela p d3" style="top: 950px; left: 640px;"></span>
+  <span class="estrela d2" style="top: 1200px; left: 1000px;"></span>
+  <span class="estrela g d1" style="top: 1560px; left: 800px;"></span>
+  <span class="estrela p d1" style="top: 140px; left: 70px;"></span>
+  <span class="estrela d3" style="top: 215px; left: 640px;"></span>
+  <span class="estrela g d2" style="top: 400px; left: 900px;"></span>
+  <span class="estrela p" style="top: 570px; left: 400px;"></span>
+  <span class="estrela d1" style="top: 610px; left: 20px;"></span>
+  <span class="estrela p d2" style="top: 1610px; left: 600px;"></span>
+  <span class="estrela d3" style="top: 1690px; left: 120px;"></span>
+  <span class="estrela p d1" style="top: 1700px; left: 980px;"></span>
+</div>
+</body>
+</html>
