@@ -5,12 +5,14 @@
          animation: roda 60s linear infinite reverse; }
 .disco { position: absolute; border-radius: 50%;
          background:
+           conic-gradient(from 0deg, rgba(255,255,255,.16) 0 4deg, transparent 14deg 120deg,
+                          rgba(255,255,255,.10) 128deg 132deg, transparent 145deg 230deg,
+                          rgba(226,162,16,.22) 236deg 240deg, transparent 252deg),
            radial-gradient(circle, transparent 0 17%, rgba(255,255,255,.04) 17.5%, transparent 18%),
            repeating-radial-gradient(circle, #1a1310 0 3px, #241a15 3px 6px);
          box-shadow: 0 30px 60px rgba(74, 42, 26, .45), inset 0 0 0 10px #120d0b;
-         animation: roda 8s linear infinite; }
+         animation: roda 3s linear infinite; } /* uma volta a cada 3 s */
 .disco .rotulo { position: absolute; inset: 33%; border-radius: 50%; background: var(--mostarda);
-                 animation: roda 8s linear infinite reverse; /* rótulo fica parado para ler o nome */
                  display: grid; place-items: center; box-shadow: inset 0 0 0 6px var(--mostarda-escura); }
 .disco .rotulo img { width: 62%; }
 .disco .rotulo::after { content: ""; position: absolute; width: 4%; height: 4%; border-radius: 50%; background: #1a1310; }
