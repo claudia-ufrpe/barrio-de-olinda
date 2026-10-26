@@ -23,3 +23,4 @@
              display: grid; place-items: center; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); }
 .logo-selo img { width: 98px; }
 .estrela { box-shadow: none; filter: drop-shadow(0 0 3px var(--creme)) drop-shadow(0 3px 4px rgba(0, 0, 0, .4)); }
+.cartao-festa .quem .orq { font: 900 60px/1.1 var(--titulo); font-style: normal; color: var(--mostarda-clara); }
