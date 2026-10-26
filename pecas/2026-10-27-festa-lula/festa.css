@@ -1,6 +1,7 @@
 /* Festa do Lula: foto da carreata em faixa larga no meio, título no mostarda em cima, cartão marrom embaixo */
 .titulo-festa { position: absolute; left: 50px; right: 50px; text-align: center; }
-.titulo-festa small { display: block; font: 700 40px/1.2 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+.titulo-festa small { display: inline-block; font: 700 48px/1.15 var(--texto); letter-spacing: 2px; color: var(--creme);
+                      background: var(--marrom); padding: 16px 34px 10px; border-radius: 18px; box-shadow: 0 8px 20px rgba(74, 42, 26, .3); }
 .titulo-festa strong { display: block; font: 900 142px/.95 var(--titulo); color: var(--marrom); letter-spacing: -3px; margin-top: 12px; }
 .foto-faixa { position: absolute; left: 0; right: 0; overflow: hidden;
               border-top: 10px solid var(--creme); border-bottom: 10px solid var(--creme);
