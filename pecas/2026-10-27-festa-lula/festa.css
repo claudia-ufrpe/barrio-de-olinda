@@ -1,0 +1,25 @@
+/* Festa do Lula: vídeo em tela cheia, faixa mostarda inclinada em cima, cartão marrom embaixo */
+.peca::before { display: none; }
+.tela { position: absolute; inset: 0; }
+.sombra { position: absolute; left: 0; right: 0; pointer-events: none; }
+.faixa-festa { position: absolute; left: -40px; right: -40px; transform: rotate(-4deg); overflow: hidden;
+               background: radial-gradient(80% 140% at 50% 0%, var(--mostarda-clara), var(--mostarda) 60%, var(--mostarda-escura));
+               border-top: 8px solid var(--creme); border-bottom: 8px solid var(--creme);
+               box-shadow: 0 18px 40px rgba(0, 0, 0, .45); text-align: center; }
+.faixa-festa::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+.faixa-festa > * { position: relative; }
+.faixa-festa small { display: block; font: 700 38px/1.15 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+.faixa-festa strong { display: block; font: 900 128px/.95 var(--titulo); color: var(--marrom); letter-spacing: -2px; margin-top: 10px; }
+.cartao-festa { position: absolute; background: var(--marrom); color: var(--creme); border: 6px solid var(--creme);
+                border-radius: 30px; box-shadow: 0 16px 40px rgba(0, 0, 0, .5); overflow: hidden; }
+.cartao-festa .quando { display: flex; align-items: baseline; gap: 22px; padding: 26px 34px 6px; }
+.cartao-festa .dia { font: 700 46px/1 var(--texto); letter-spacing: 2px; color: var(--mostarda-clara); }
+.cartao-festa .hora { font: 900 92px/1 var(--titulo); }
+.cartao-festa .hora small { font: 700 34px/1 var(--texto); color: var(--mostarda-clara); margin-right: 8px; letter-spacing: 1px; }
+.cartao-festa .quem { padding: 14px 34px 26px; border-top: 3px solid rgba(246, 236, 214, .2); margin-top: 18px; }
+.cartao-festa .quem b { display: block; font: 900 74px/1 var(--titulo); }
+.cartao-festa .quem span { display: block; font: 600 44px/1.1 var(--texto); margin-top: 8px; color: rgba(246, 236, 214, .85); }
+.logo-selo { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: var(--creme);
+             display: grid; place-items: center; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); }
+.logo-selo img { width: 98px; }
+.estrela { box-shadow: none; filter: drop-shadow(0 0 3px var(--creme)) drop-shadow(0 3px 4px rgba(0, 0, 0, .4)); }

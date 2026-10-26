@@ -3,6 +3,7 @@
 // - .peca com data-estatico: gera só o PNG (ex.: post de WhatsApp).
 // - elemento com data-video="caminho.mp4": o vídeo é encaixado nesse espaço (com o áudio dele).
 //   Com data-atras, o vídeo fica atrás de tudo (texto e estrelas por cima).
+// - .peca com data-duracao="20": duração própria em segundos (ex.: reels).
 import { chromium } from "playwright";
 import { execFileSync } from "node:child_process";
 import { mkdirSync, rmSync, readdirSync } from "node:fs";
@@ -36,6 +37,7 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
     continue;
   }
 
+  const dur = Number(await peca.getAttribute("data-duracao")) || total;
   const videos = await page.$$eval("[data-video]", (els) => els.map((e) => {
     const r = e.getBoundingClientRect();
     return { src: e.dataset.video, x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height),
@@ -47,7 +49,7 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
   const quadros = join(saida, `.${nome}-quadros`);
   rmSync(quadros, { recursive: true, force: true });
   mkdirSync(quadros);
-  const n = Math.round(total * FPS);
+  const n = Math.round(dur * FPS);
   for (let i = 0; i < n; i++) {
     await vai(i / FPS);
     const q = join(quadros, String(i).padStart(4, "0"));
@@ -64,7 +66,7 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
       `[0:v]fps=${FPS},scale=${v.w}:${v.h}:force_original_aspect_ratio=increase,crop=${v.w}:${v.h},setsar=1,` +
       `pad=${Math.round(width)}:${Math.round(height)}:${v.x}:${v.y}[v];[v][1:v]overlay=0:0:shortest=1,format=yuv420p[o]`;
     execFileSync("ffmpeg", [
-      "-y", "-loglevel", "error", "-t", String(total), "-i", resolve(pasta, v.src),
+      "-y", "-loglevel", "error", "-t", String(dur), "-i", resolve(pasta, v.src),
       "-framerate", String(FPS), "-i", join(quadros, "%04d.png"),
       "-filter_complex", filtro, "-map", "[o]", "-map", "0:a?",
       "-c:v", "libx264", "-crf", "16", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
@@ -85,7 +87,7 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
       `[1:v]fps=${FPS},scale=${v.w}:${v.h}:force_original_aspect_ratio=increase,crop=${v.w}:${v.h},setsar=1,format=rgba[v];` +
       `${mascara}[m];[v][m]alphamerge[vm];[0:v][vm]overlay=${v.x}:${v.y}:shortest=1,format=yuv420p[o]`;
     execFileSync("ffmpeg", [
-      "-y", "-loglevel", "error", "-i", base, "-t", String(total), "-i", src,
+      "-y", "-loglevel", "error", "-i", base, "-t", String(dur), "-i", src,
       "-filter_complex", filtro, "-map", "[o]", "-map", "1:a?",
       "-c:v", "libx264", "-crf", "16", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
     ]);
