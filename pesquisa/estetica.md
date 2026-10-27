@@ -77,7 +77,13 @@ Ainda valem: foto real em tela cheia (quando houver vídeo ou foto boa) e o fund
 - `marca/fontes/alfa-slab-one-*` — letra de cartaz de lambe-lambe (`var(--cartaz)`).
 - `pesquisa/mostruario/` — um exemplo de cada linguagem.
 
-## 8. Para melhorar depois
+## 8. Foto do Barrio no fundo
+
+- Usar só fotos do próprio Barrio, como `fotos/fachada-barrio.jpg` (fachada amarela com arcos brancos). Cenas de rua ou da festa não servem, porque não mostram a casa.
+- O fundo é sempre o amarelo do Barrio, que é a cor da própria fachada. A foto entra por cima bem clarinha (cerca de 20%), escurecendo só um pouco, para aparecerem os arcos e janelas sem atrapalhar a leitura.
+- Aprovado pela dona na peça da festa do Lula (27/10).
+
+## 9. Para melhorar depois
 
 - Fotografar o casario, os azulejos e a fachada do próprio Barrio e usar no lugar dos desenhos.
 - Pedir a um xilogravador de Olinda ou Bezerros uma matriz exclusiva do Barrio. Seria o símbolo mais forte possível.
