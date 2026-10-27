@@ -39,5 +39,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-10-24 fino do samba | fundo marrom (noite), arco mostarda tipo palco com o cantor recortado, letras creme | "Samba, boa música e gente boa" |
 | 2026-10-27 festa do Lula | Lambe-lambe de militância: faixa vermelha LULA, foto colada com fita, selo 81 anos, fachada do Barrio sutil no fundo amarelo | Som na Rural com a Orquestra de Babá e convidados |
 | 2026-10-27 tá lindo | Ladeira: bandeirinhas, título grande à esquerda, duas fotos reais da festa coladas como retrato | "Tá lindo!" |
+| 2026-10-27 som na rural | Cordel (imagem parada): papel creme, moldura de cordel, foto da Kombi no centro, eixo centralizado | "Chega mais!" |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
