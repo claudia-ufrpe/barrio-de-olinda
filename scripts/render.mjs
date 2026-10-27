@@ -69,12 +69,13 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
       "-y", "-loglevel", "error", "-t", String(dur), "-i", resolve(pasta, v.src),
       "-framerate", String(FPS), "-i", join(quadros, "%04d.png"),
       "-filter_complex", filtro, "-map", "[o]", "-map", "0:a?",
-      "-c:v", "libx264", "-crf", "16", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
+      "-c:v", "libx264", "-crf", "22", "-maxrate", "6M", "-bufsize", "12M", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
     ]);
     execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-ss", String(ANIM), "-i", mp4, "-frames:v", "1", join(saida, `${nome}.png`)]);
   } else execFileSync("ffmpeg", [
     "-y", "-loglevel", "error", "-framerate", String(FPS), "-i", join(quadros, "%04d.jpg"),
-    "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", "-movflags", "+faststart", mp4,
+    "-f", "lavfi", "-t", String(dur), "-i", "anullsrc=r=44100:cl=stereo", // faixa de som muda: o Instagram aceita melhor
+    "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-crf", "22", "-maxrate", "6M", "-bufsize", "12M", "-movflags", "+faststart", mp4,
   ]);
   if (videos.length && !atras) {
     const v = videos[0];
@@ -89,7 +90,7 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
     execFileSync("ffmpeg", [
       "-y", "-loglevel", "error", "-i", base, "-t", String(dur), "-i", src,
       "-filter_complex", filtro, "-map", "[o]", "-map", "1:a?",
-      "-c:v", "libx264", "-crf", "16", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
+      "-c:v", "libx264", "-crf", "22", "-maxrate", "6M", "-bufsize", "12M", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", mp4,
     ]);
     execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-ss", String(ANIM), "-i", mp4, "-frames:v", "1", join(saida, `${nome}.png`)]);
   }
