@@ -23,6 +23,9 @@ Gera em `exportado/` um PNG (imagem final) e um MP4 de 15 s (duração de um sto
 
 Para uma nova peça, copie uma pasta de `pecas/`, troque foto e textos e rode o comando.
 
+## Pesquisa estética e símbolos pernambucanos
+Veja `pesquisa/estetica.md` (público, estudos, referências, as três linguagens Cordel / Ladeira / Lambe-lambe) e o mostruário em `pesquisa/mostruario/mostruario.png`. Símbolos prontos em `marca/simbolos/` com estilos em `marca/simbolos.css`.
+
 ## Variar sempre
 O que fica fixo: cores, fontes, padrão de azulejo, logo e estrelinhas.
 O que muda de uma peça para outra: o layout e a frase de fechamento. Não repetir o mesmo layout nem o "Vem almoçar no Barrio" em dias seguidos.
