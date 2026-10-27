@@ -10,7 +10,7 @@
 .cartao-festa { position: absolute; background: var(--marrom); color: var(--creme); border: 6px solid var(--creme);
                 border-radius: 30px; box-shadow: 0 16px 40px rgba(74, 42, 26, .45); overflow: hidden; }
 .cartao-festa .quando { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 22px; row-gap: 8px; padding: 26px 34px 6px; }
-.cartao-festa .dia { font: 700 46px/1 var(--texto); letter-spacing: 2px; color: var(--mostarda-clara); }
+.cartao-festa .dia { font: 700 44px/1 var(--texto); letter-spacing: 1px; color: var(--mostarda-clara); }
 .cartao-festa .hora { font: 900 92px/1 var(--titulo); }
 .cartao-festa .hora small { font: 700 34px/1 var(--texto); color: var(--mostarda-clara); margin-right: 8px; letter-spacing: 1px; }
 .cartao-festa .quem { padding: 16px 34px 26px; border-top: 3px solid rgba(246, 236, 214, .2); margin-top: 16px; }
@@ -22,3 +22,6 @@
 .logo-selo img { width: 65%; }
 .estrela.m { width: 48px; height: 48px; }
 .cartao-festa .quem .conv { color: var(--creme); }
+.cartao-festa .couvert { flex-basis: 100%; font: 700 40px/1 var(--texto); letter-spacing: 2px; color: var(--mostarda-clara); }
+.cartao-festa .couvert b { font: 900 60px/1 var(--titulo); color: var(--creme); letter-spacing: 0; margin-left: 6px; }
+.snr { position: absolute; border-radius: 50%; border: 5px solid var(--marrom); box-shadow: 0 10px 24px rgba(74, 42, 26, .35); }
