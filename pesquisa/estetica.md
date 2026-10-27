@@ -80,8 +80,37 @@ Ainda valem: foto real em tela cheia (quando houver vídeo ou foto boa) e o fund
 ## 8. Foto do Barrio no fundo
 
 - Usar só fotos do próprio Barrio, como `fotos/fachada-barrio.jpg` (fachada amarela com arcos brancos). Cenas de rua ou da festa não servem, porque não mostram a casa.
-- O fundo é sempre o amarelo do Barrio, que é a cor da própria fachada. A foto entra por cima bem clarinha (cerca de 20%), escurecendo só um pouco, para aparecerem os arcos e janelas sem atrapalhar a leitura.
+- O fundo é sempre o amarelo do Barrio, que é a cor da própria fachada. A foto entra por cima bem clarinha (10–12%), escurecendo só um pouco, para aparecerem os arcos e janelas sem atrapalhar a leitura.
 - Aprovado pela dona na peça da festa do Lula (27/10).
+
+## Diagramação (regras de montagem)
+
+Fontes: guias de área segura do Instagram (Meta) e princípios clássicos de grade (Müller-Brockmann, *Sistemas de grelhas*).
+
+**Áreas seguras**
+- **Story (1080×1920):** deixar livres os 200 px de cima (foto e nome do perfil) e os 170 px de baixo (caixa de resposta).
+- **Reels (1080×1920):** a arte inteira fica na faixa central 4:5, de y=285 a y=1635. Esse é o recorte que aparece na grade do perfil, e fora dele ficam a legenda e o áudio. Os 150 px da direita ficam livres por causa dos botões de curtir e comentar. Só faixas de cor de ponta a ponta podem passar dessas margens.
+- **WhatsApp e feed (1080×1350):** margem de pelo menos 36 px em todos os lados.
+
+**Grade e alinhamento**
+- Usar um eixo só: tudo centralizado (cartaz, lambe-lambe) ou tudo à esquerda (ladeira). Não misturar.
+- Os blocos ficam empilhados de cima para baixo, e o espaço entre eles se repete igual. Nada fica solto em posição aleatória.
+- Faixas de cor (título, data) vão de ponta a ponta. Elas dão ritmo e "seguram" o cartaz.
+
+**Hierarquia (máximo 4 níveis)**
+1. O assunto (LULA, nome do artista, prato): o maior da peça.
+2. Quando (dia e hora): numa faixa de contraste.
+3. Quem toca ou o que tem.
+4. Couvert, logos e detalhes.
+
+**Elementos decorativos**
+- Estrelas e símbolos ficam **ao lado** do texto, na mesma linha, ou num espaço vazio. Nunca por trás de letras.
+- Selos (como o "81 anos") ficam no canto de uma foto, sem cobrir texto nem faixa.
+- A estrela de xilogravura é vermelha com contorno marrom, sem traços brancos.
+
+**Contraste**
+- Fundo claro (amarelo vivo, sem bordas escuras). A foto da fachada do Barrio entra a 10–12%.
+- Texto em marrom, ou em branco com contorno marrom. Vermelho só em faixa, com texto claro por cima. Vermelho nunca vai como cor de letra sobre o amarelo.
 
 ## 9. Para melhorar depois
 

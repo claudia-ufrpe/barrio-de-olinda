@@ -22,14 +22,22 @@
 .selo-81 b { display: block; font: 400 104px/.9 var(--cartaz); color: var(--mostarda-clara); letter-spacing: 0; }
 .quando { background: var(--marrom); color: var(--mostarda-clara); font-size: 84px; padding: 22px 0 10px; letter-spacing: 3px; }
 .atracao { color: var(--marrom); font-size: 116px; }
-.orq { color: var(--vermelho); font-size: 62px; }
+.orq { color: #fff; font-size: 62px; text-shadow: 3px 3px 0 var(--marrom), -1px -1px 0 var(--marrom), 1px -1px 0 var(--marrom), -1px 1px 0 var(--marrom); }
 .conv { color: var(--marrom); font-size: 56px; }
 .rodape { display: flex; align-items: center; justify-content: space-between; padding: 0 50px; }
 .couvert { font: 700 46px/1 var(--texto); color: var(--marrom); letter-spacing: 2px; border: 5px solid var(--marrom); padding: 18px 26px 10px; }
-.couvert b { font: 400 66px/1 var(--cartaz); color: var(--vermelho); letter-spacing: 0; margin-left: 8px; }
+.couvert b { font: 400 66px/1 var(--cartaz); color: #fff; text-shadow: 3px 3px 0 var(--marrom), -1px -1px 0 var(--marrom), 1px -1px 0 var(--marrom), -1px 1px 0 var(--marrom); letter-spacing: 0; margin-left: 8px; }
 .logos { display: flex; gap: 22px; align-items: center; }
 .logos .snr { width: 150px; height: 150px; border-radius: 50%; border: 5px solid var(--marrom); }
 .logos .barrio { width: 150px; height: 150px; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; }
 .logos .barrio img { width: 66%; }
 .estrela-xilo.grande { animation: gira-sol 30s linear infinite; }
 .estrela-xilo.p { width: 56px; height: 56px; }
+
+/* fundo claro: amarelo do Barrio sem escurecer as bordas */
+.peca.festa { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.peca.festa .fundo-barrio { opacity: .11; }
+.peca.festa.xilo::after { opacity: .22; }
+/* estrelas dentro da linha do texto, nunca atrás dele */
+.linha { display: flex; align-items: center; justify-content: center; gap: 28px; }
+.linha .estrela-xilo { position: static; flex: none; }
