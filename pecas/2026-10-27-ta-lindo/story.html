@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Story — Tá lindo</title>
+<link rel="stylesheet" href="../../marca/barrio.css">
+<link rel="stylesheet" href="../../marca/simbolos.css">
+<style>
+  /* Linguagem Ladeira: amarelo do Barrio, bandeirinhas, eixo à esquerda, fotos coladas como retrato */
+  .peca { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+  .bandeirinhas { top: 0; }
+  .topo { position: absolute; top: 200px; left: 60px; right: 60px; }
+  .topo small { display: block; font: 700 44px/1.15 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+  .linha { display: flex; align-items: center; gap: 26px; margin-top: 6px; }
+  .linha h1 { font: 900 190px/.95 var(--titulo); color: var(--marrom); letter-spacing: -4px; }
+  .linha .estrela-xilo { position: static; width: 110px; height: 110px; flex: none; }
+  .retrato { position: absolute; left: 60px; right: 60px; background: var(--creme); padding: 14px;
+             box-shadow: 0 18px 34px rgba(74, 42, 26, .35); }
+  .retrato .janela { overflow: hidden; height: 100%; }
+  .retrato img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .r1 { top: 520px; height: 640px; transform: rotate(-1.5deg); }
+  .r1 img { object-position: 50% 45%; }
+  .r2 { top: 1150px; height: 560px; transform: rotate(1.5deg); }
+  .r2 img { object-position: 50% 40%; }
+  .logo-selo { position: absolute; top: 1600px; right: 40px; width: 170px; height: 170px; border-radius: 50%;
+               background: var(--marrom); display: grid; place-items: center; box-shadow: 0 10px 24px rgba(74, 42, 26, .4); }
+  .logo-selo img { width: 66%; }
+</style>
+</head>
+<body>
+<div class="peca story">
+  <div class="bandeirinhas"></div>
+  <div class="topo">
+    <small class="a-sobe">FESTA DO LULA NO BARRIO</small>
+    <div class="linha"><h1 class="a-sobe d1">Tá lindo!</h1><span class="estrela-xilo"></span></div>
+  </div>
+  <div class="retrato r1"><div class="janela"><img class="a-zoom" src="../../fotos/festa-lula-barrio-fachada.jpg" alt=""></div></div>
+  <div class="retrato r2"><div class="janela"><img class="a-zoom" src="../../fotos/festa-lula-barrio-mesas.jpg" alt=""></div></div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></div>
+</div>
+</body>
+</html>
