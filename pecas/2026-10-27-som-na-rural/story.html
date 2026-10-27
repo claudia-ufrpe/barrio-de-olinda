@@ -6,37 +6,40 @@
 <link rel="stylesheet" href="../../marca/barrio.css">
 <link rel="stylesheet" href="../../marca/simbolos.css">
 <style>
-  /* Linguagem Cordel: papel creme, moldura de cordel, eixo centralizado, foto como gravura de capa */
-  .moldura-cordel { position: absolute; top: 150px; bottom: 140px; left: 40px; right: 40px; }
-  .conteudo { position: absolute; top: 230px; bottom: 210px; left: 100px; right: 100px;
-              display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; }
-  .aqui { display: flex; align-items: center; gap: 22px; font: 700 50px/1 var(--texto); letter-spacing: 5px; color: var(--vermelho); }
-  .aqui .estrela-xilo { position: static; width: 56px; height: 56px; }
-  .moldura-cordel { animation: none; }
-  h1 { font: 400 150px/.95 var(--cartaz); color: var(--marrom); }
-  .com { font: 600 52px/1.1 var(--titulo); color: var(--marrom-medio); }
-  .orq { font: 900 104px/1 var(--titulo); color: var(--marrom); letter-spacing: -2px; }
-  .gravura { width: 100%; height: 640px; border: 8px solid var(--marrom); padding: 10px; background: var(--creme); }
-  .gravura .janela { width: 100%; height: 100%; overflow: hidden; }
-  .gravura img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block; filter: contrast(1.08) saturate(1.1); }
-  .rodape { width: 100%; display: flex; align-items: center; justify-content: space-between; border-top: 4px solid var(--marrom); padding-top: 26px; }
-  .rodape span { font: 700 46px/1.1 var(--texto); color: var(--marrom); text-align: left; }
-  .logos { display: flex; gap: 18px; }
-  .logos img { width: 130px; height: 130px; border-radius: 50%; }
-  .logos .barrio { width: 130px; height: 130px; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; }
+  /* Cordel sobre vídeo: o vídeo da noite ocupa a tela; o texto fica em dois cartões de papel com moldura de cordel */
+  .peca::before { display: none; }
+  .tela { position: absolute; inset: 0; }
+  .cartao { position: absolute; left: 50px; right: 50px; text-align: center; padding: 34px 40px 30px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .5); }
+  .cartao .moldura-cordel { position: absolute; inset: 0; border-width: 28px; }
+  .cima { top: 190px; }
+  .baixo { bottom: 170px; }
+  .aqui { display: flex; align-items: center; justify-content: center; gap: 20px; font: 700 44px/1 var(--texto); letter-spacing: 5px; color: var(--vermelho); }
+  .aqui .estrela-xilo { position: static; width: 50px; height: 50px; }
+  h1 { font: 400 132px/.95 var(--cartaz); color: var(--marrom); margin-top: 14px; }
+  .com { font: 600 46px/1.1 var(--titulo); color: var(--marrom-medio); }
+  .orq { font: 900 96px/1 var(--titulo); color: var(--marrom); letter-spacing: -2px; margin-top: 4px; }
+  .logos { display: flex; justify-content: center; gap: 18px; margin-top: 22px; }
+  .logos img { width: 120px; height: 120px; border-radius: 50%; }
+  .logos .barrio { width: 120px; height: 120px; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; }
   .logos .barrio img { width: 66%; height: auto; border-radius: 0; }
 </style>
 </head>
 <body>
-<div class="peca story papel xilo">
-  <div class="moldura-cordel"></div>
-  <div class="conteudo">
+<div class="peca story">
+  <div class="tela" data-video="../../videos/som-na-rural-2026-10-27.mp4" data-atras></div>
+
+  <div class="cartao cima papel">
+    <div class="moldura-cordel"></div>
     <div class="aqui a-sobe"><span class="estrela-xilo"></span>AQUI NO BARRIO<span class="estrela-xilo"></span></div>
-    <h1 class="a-sobe d1">SOM NA<br>RURAL</h1>
-    <div class="gravura"><div class="janela"><img class="a-zoom" src="../../fotos/som-na-rural-no-barrio.jpg" alt=""></div></div>
-    <div><div class="com">com a</div><div class="orq a-sobe d2">Orquestra de Babá</div></div>
-    <div class="rodape"><span>Chega mais!</span>
-      <span class="logos"><img src="../../marca/logo/som-na-rural.png" alt="Som na Rural"><span class="barrio"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></span></span></div>
+    <h1 class="a-sobe d1">SOM NA RURAL</h1>
+  </div>
+
+  <div class="cartao baixo papel">
+    <div class="moldura-cordel"></div>
+    <div class="com">com a</div>
+    <div class="orq a-sobe d2">Orquestra de Babá</div>
+    <div class="logos"><img src="../../marca/logo/som-na-rural.png" alt="Som na Rural"><span class="barrio"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></span></div>
   </div>
 </div>
 </body>
