@@ -23,3 +23,4 @@
 .peca.amarelo .acomp span { color: var(--marrom-medio); }
 .peca.amarelo .rodape .barrio { background: var(--marrom); }
 .peca.amarelo .cercadura { background-image: url("../../marca/simbolos/cercadura-azulejo-sem-vermelho.svg"); }
+.foto-lambe img { object-position: 50% 0; }
