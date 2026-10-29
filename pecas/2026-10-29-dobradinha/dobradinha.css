@@ -16,3 +16,10 @@
 .rodape .barrio img { width: 66%; }
 .linha-tem { display: flex; align-items: center; gap: 28px; }
 .linha-tem .estrela-xilo { position: static; width: 70px; height: 70px; }
+
+/* depois da eleição: sem vermelho e sem estrelas; fundo amarelo do Barrio */
+.peca.amarelo { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.peca.amarelo .tem { color: var(--marrom); }
+.peca.amarelo .acomp span { color: var(--marrom-medio); }
+.peca.amarelo .rodape .barrio { background: var(--marrom); }
+.peca.amarelo .cercadura { background-image: url("../../marca/simbolos/cercadura-azulejo-sem-vermelho.svg"); }

@@ -117,3 +117,8 @@ Fontes: guias de área segura do Instagram (Meta) e princípios clássicos de gr
 - Fotografar o casario, os azulejos e a fachada do próprio Barrio e usar no lugar dos desenhos.
 - Pedir a um xilogravador de Olinda ou Bezerros uma matriz exclusiva do Barrio. Seria o símbolo mais forte possível.
 - Pesquisar a fonte "Barzin" (letreiros de bares de Caruaru, UFPE) e a fonte Armorial para títulos.
+
+## Atualização 29/10/2026
+- A eleição passou: **sem vermelho e sem estrelas** nas peças, salvo pedido. Destaques em marrom, creme e amarelo claro.
+- O **bege/creme como fundo** ficou "sem graça" para a dona: usar o **amarelo do Barrio** como fundo padrão nas três linguagens. O creme fica só em detalhes (molduras de foto, cartões pequenos).
+- Barra de azulejo sem vermelho: `marca/simbolos/cercadura-azulejo-sem-vermelho.svg`.
