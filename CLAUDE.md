@@ -7,4 +7,5 @@
 - Varie layout e frase de fechamento a cada peça (veja a tabela no README).
 - Sempre mande no chat as peças prontas (vídeo e imagem) assim que ficarem prontas.
 - Desde 29/10/2026 (eleição passou): NÃO usar vermelho nem estrelas, a menos que a dona peça. Evitar fundo bege/creme (ela acha sem graça): preferir o amarelo do Barrio.
+- Nunca use pergunta em anúncio (nada de "Bora almoçar?"). Frase de fechamento sempre afirmativa ou convite direto.
 - Não invente informação (preço, horário, "só hoje"). Se faltar, pergunte.

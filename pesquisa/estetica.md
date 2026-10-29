@@ -68,7 +68,7 @@ Ainda valem: foto real em tela cheia (quando houver vídeo ou foto boa) e o fund
 3. A estrela vermelha passa a ser preferencialmente a **estrela de xilogravura**, com traço marrom.
 4. Fugir do cartão de cantos redondos como solução padrão. Usar filete, faixa reta ou moldura de cordel.
 5. Contraste sempre marrom × creme ou marrom × mostarda. Vermelho só para destaque curto.
-6. Frase de fechamento com sotaque, sem firula: "Bora pro Barrio", "Te espero na ladeira", "Chega mais".
+6. Frase de fechamento com sotaque, sem firula e **nunca em forma de pergunta**: "Vem pro Barrio", "Te espero na ladeira", "Chega mais".
 
 ## 7. Arquivos criados
 

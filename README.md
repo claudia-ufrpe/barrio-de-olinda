@@ -40,6 +40,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-10-27 festa do Lula | Lambe-lambe de militância: faixa vermelha LULA, foto colada com fita, selo 81 anos, fachada do Barrio sutil no fundo amarelo | Som na Rural com a Orquestra de Babá e convidados |
 | 2026-10-27 tá lindo | Ladeira: bandeirinhas, título grande à esquerda, duas fotos reais da festa coladas como retrato | "Tá lindo!" |
 | 2026-10-27 som na rural | Cordel sobre vídeo: vídeo real da noite em tela cheia com som, dois cartões de papel com moldura de cordel (em cima e embaixo) | logos Som na Rural + Barrio |
-| 2026-10-29 dobradinha | Lambe-lambe de comida: TEM em vermelho, faixa marrom DOBRADINHA, foto colada com fita, barra de azulejo | "Bora almoçar?" |
+| 2026-10-29 dobradinha | Lambe-lambe de comida: TEM em vermelho, faixa marrom DOBRADINHA, foto colada com fita, barra de azulejo | "Vem almoçar com a gente" |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
