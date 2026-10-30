@@ -122,3 +122,8 @@ Fontes: guias de área segura do Instagram (Meta) e princípios clássicos de gr
 - A eleição passou: **sem vermelho e sem estrelas** nas peças, salvo pedido. Destaques em marrom, creme e amarelo claro.
 - O **bege/creme como fundo** ficou "sem graça" para a dona: usar o **amarelo do Barrio** como fundo padrão nas três linguagens. O creme fica só em detalhes (molduras de foto, cartões pequenos).
 - Barra de azulejo sem vermelho: `marca/simbolos/cercadura-azulejo-sem-vermelho.svg`.
+
+## Atualização 30/10/2026 — "santinho de defunto"
+- Artista centralizado dentro de arco, oval ou moldura com bordinha lembra santinho de missa. **Evitar.**
+- O que funcionou (Radiola de Ficha v2): artista grande recortado, sem moldura, saindo pela lateral; faixa marrom inclinada com letreiro correndo atrás; texto à esquerda; faixa de informações de ponta a ponta; logo do Barrio em destaque no topo.
+- Recortes de foto com bordas retas: suavizar a borda (sumir aos poucos) para não parecer colado.

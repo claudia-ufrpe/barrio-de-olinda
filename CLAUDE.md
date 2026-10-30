@@ -8,4 +8,6 @@
 - Sempre mande no chat as peças prontas (vídeo e imagem) assim que ficarem prontas.
 - Desde 29/10/2026 (eleição passou): NÃO usar vermelho nem estrelas, a menos que a dona peça. Evitar fundo bege/creme (ela acha sem graça): preferir o amarelo do Barrio.
 - Nunca use pergunta em anúncio (nada de "Bora almoçar?"). Frase de fechamento sempre afirmativa ou convite direto.
+- Logo do Barrio SEMPRE visível em toda peça.
+- Nada de "santinho": não colocar o artista centralizado dentro de arco/moldura/oval. Preferir cartaz de show: artista grande, sem moldura, saindo pela lateral; faixas inclinadas e letreiros.
 - Não invente informação (preço, horário, "só hoje"). Se faltar, pergunte.
