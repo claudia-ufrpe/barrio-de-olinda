@@ -1,0 +1,26 @@
+/* Lambe-lambe de comida: papel creme, faixas de letra de cartaz, foto colada com fita, barra de azulejo */
+.cartaz { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.tem { font: 400 96px/1 var(--cartaz); color: var(--vermelho); letter-spacing: 6px; }
+.nome { align-self: stretch; background: var(--marrom); color: var(--mostarda-clara); text-align: center;
+        font: 400 150px/1 var(--cartaz); padding: 34px 0 22px; letter-spacing: 2px; }
+.foto-lambe { position: relative; background: var(--creme); padding: 14px; transform: rotate(-1.5deg); box-shadow: 0 18px 30px rgba(74, 42, 26, .3); }
+.foto-lambe .janela { overflow: hidden; }
+.foto-lambe img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fita { position: absolute; width: 160px; height: 48px; background: rgba(246, 236, 214, .85); box-shadow: 0 2px 4px rgba(0,0,0,.15); }
+.acomp { text-align: center; font: 400 64px/1.1 var(--cartaz); color: var(--marrom); }
+.acomp span { color: var(--vermelho); }
+.cercadura { position: relative; align-self: stretch; }
+.rodape { align-self: stretch; display: flex; align-items: center; justify-content: space-between; padding: 0 60px; }
+.rodape .frase { font: 900 70px/1 var(--titulo); color: var(--marrom); letter-spacing: -1px; }
+.rodape .barrio { width: 150px; height: 150px; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; }
+.rodape .barrio img { width: 66%; }
+.linha-tem { display: flex; align-items: center; gap: 28px; }
+.linha-tem .estrela-xilo { position: static; width: 70px; height: 70px; }
+
+/* depois da eleição: sem vermelho e sem estrelas; fundo amarelo do Barrio */
+.peca.amarelo { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.peca.amarelo .tem { color: var(--marrom); }
+.peca.amarelo .acomp span { color: var(--marrom-medio); }
+.peca.amarelo .rodape .barrio { background: var(--marrom); }
+.peca.amarelo .cercadura { background-image: url("../../marca/simbolos/cercadura-azulejo-sem-vermelho.svg"); }
+.foto-lambe img { object-position: 50% 0; }

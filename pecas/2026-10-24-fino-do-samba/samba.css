@@ -1,0 +1,24 @@
+/* O Fino do Samba: fundo marrom, arco mostarda tipo palco atrás do cantor, letras creme */
+.peca.noite { background: radial-gradient(90% 60% at 50% 40%, #5c3522 0%, var(--marrom) 55%, #2c170d 100%); color: var(--creme); }
+.peca.noite::before { opacity: .6; }
+.arco { position: absolute; border-radius: 999px 999px 0 0; overflow: hidden; -webkit-mask: linear-gradient(#000 55%, transparent 92%);
+        background: radial-gradient(80% 60% at 50% 30%, var(--mostarda-clara), var(--mostarda) 60%, var(--mostarda-escura)); }
+.arco::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+.contorno { position: absolute; border-radius: 999px 999px 0 0; -webkit-mask: linear-gradient(#000 50%, transparent 85%); border: 3px solid rgba(246, 236, 214, .55); border-bottom: 0; }
+.cantor { position: absolute; -webkit-mask: linear-gradient(#000 60%, transparent 87%);
+          filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .45));
+          transform-origin: 50% 100%; animation: respira-cantor 4s ease-in-out infinite; }
+.chamou { font: 700 38px/1 var(--texto); letter-spacing: 5px; color: var(--mostarda-clara); }
+.titulo { font: 900 112px/.95 var(--titulo); letter-spacing: -2px; color: var(--creme); }
+.titulo em { font-style: normal; color: var(--mostarda); }
+.vespera { display: inline-block; background: var(--vermelho); color: var(--creme); font: 700 30px/1 var(--texto);
+           letter-spacing: 2px; padding: 12px 18px 8px; border-radius: 10px; transform: rotate(-4deg); }
+.nome { font: 900 132px/1 var(--titulo); color: var(--creme); letter-spacing: -2px; text-shadow: 0 6px 24px rgba(0, 0, 0, .5); }
+.frase { font: 600 42px/1.1 var(--titulo); color: rgba(246, 236, 214, .9); text-shadow: 0 4px 16px rgba(0, 0, 0, .5); }
+.quando { font: 700 46px/1 var(--texto); letter-spacing: 3px; color: var(--mostarda-clara); }
+.horario { font: 600 46px/1 var(--texto); color: var(--creme); margin-top: 18px; }
+.horario b { font-weight: 700; color: var(--mostarda-clara); }
+.lema { font: 600 38px/1 var(--titulo); color: rgba(246, 236, 214, .75); margin-top: 22px; }
+.estrela.p { width: 28px; height: 28px; }
+.estrela.m { width: 40px; height: 40px; }
+@keyframes respira-cantor { 0%, 100% { transform: none; } 50% { transform: scale(1.02); } }

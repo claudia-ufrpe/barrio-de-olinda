@@ -1,0 +1,28 @@
+/* Símbolos pernambucanos do Barrio — complemento de barrio.css (ver pesquisa/estetica.md)
+   Use 1 linguagem por peça (cordel, ladeira ou lambe-lambe), nunca todas juntas. */
+
+@font-face { font-family: "Alfa Slab One"; font-weight: 400; src: url("fontes/alfa-slab-one-latin-400-normal.woff2") format("woff2"); }
+:root { --cartaz: "Alfa Slab One", "Fraunces", Georgia, serif; } /* letra de cartaz tipográfico / lambe-lambe */
+
+/* papel de cordel: creme com fibra e manchas de tinta, tira o ar "digital liso" */
+.papel { background-color: var(--creme);
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' seed='7'/><feColorMatrix values='0 0 0 0 .29  0 0 0 0 .16  0 0 0 0 .1  0 0 0 .09 0'/></filter><rect width='300' height='300' filter='url(%23f)'/></svg>"); }
+.peca.papel { background: var(--creme) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' seed='7'/><feColorMatrix values='0 0 0 0 .29  0 0 0 0 .16  0 0 0 0 .1  0 0 0 .09 0'/></filter><rect width='300' height='300' filter='url(%23f)'/></svg>"); }
+.peca.papel::before { opacity: .35; }
+
+/* granulado de xilogravura: aplicar por cima de qualquer peça (.peca.xilo) */
+.xilo::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='g'><feTurbulence type='turbulence' baseFrequency='.55' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 .29  0 0 0 0 .16  0 0 0 0 .1  0 0 0 -.9 .55'/></filter><rect width='220' height='220' filter='url(%23g)'/></svg>"); opacity: .5; }
+
+.moldura-cordel { border: 36px solid transparent; border-image: url("simbolos/moldura-cordel.svg") 40 round; }
+.bandeirinhas { position: absolute; left: 0; right: 0; height: 90px; background: url("simbolos/bandeirinhas.svg") repeat-x 0 0 / 240px 90px;
+                transform-origin: top center; animation: bandeira 3.2s ease-in-out infinite; }
+.casario { position: absolute; left: 0; right: 0; height: 200px; background: url("simbolos/casario-olinda.svg") no-repeat center bottom / 100% 200px; }
+.cercadura { position: absolute; left: 0; right: 0; height: 80px; background: url("simbolos/cercadura-azulejo.svg") repeat-x 0 0 / 80px 80px; }
+.sombrinha { position: absolute; background: url("simbolos/sombrinha-frevo.svg") no-repeat center / contain; animation: gira-sombrinha 6s linear infinite; }
+.sol-xilo { position: absolute; background: url("simbolos/sol-xilogravura.svg") no-repeat center / contain; animation: gira-sol 40s linear infinite; }
+.estrela-xilo { position: absolute; background: url("simbolos/estrela-xilo.svg") no-repeat center / contain; animation: estrela-viva 2.8s ease-in-out infinite; }
+
+@keyframes bandeira { 0%, 100% { transform: skewX(0) scaleY(1); } 50% { transform: skewX(-2deg) scaleY(1.04); } }
+@keyframes gira-sombrinha { to { transform: rotate(360deg); } }
+@keyframes gira-sol { to { transform: rotate(360deg); } }

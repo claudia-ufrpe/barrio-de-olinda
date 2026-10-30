@@ -1,0 +1,40 @@
+/* Radiola de Ficha v2 — cartaz de show (sem moldura em volta do artista):
+   amarelo do Barrio, faixa marrom inclinada com letreiro correndo, cantor grande sem moldura, ficha girando, faixa de informações de ponta a ponta */
+.peca.amarelo { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.apresenta { font: 700 44px/1 var(--texto); letter-spacing: 4px; color: var(--marrom-medio); }
+.titulo { font: 900 168px/.88 var(--titulo); color: var(--marrom); letter-spacing: -5px; margin-top: 14px; }
+.logo-barrio { position: absolute; border-radius: 50%; background: var(--marrom); display: grid; place-items: center;
+               box-shadow: 0 12px 26px rgba(74, 42, 26, .35); }
+.logo-barrio img { width: 66%; }
+.letreiro { position: absolute; left: -200px; right: -200px; background: var(--marrom); transform: rotate(-7deg); overflow: hidden;
+            box-shadow: 0 16px 34px rgba(74, 42, 26, .35); }
+.letreiro .corre { display: flex; white-space: nowrap; animation: corre 9s linear infinite; }
+.letreiro span { font: 400 92px/1 var(--cartaz); color: var(--mostarda-clara); padding: 26px 0 16px; letter-spacing: 2px; }
+.letreiro span::after { content: "•"; margin: 0 36px; color: var(--creme); }
+.cantor { position: absolute; filter: drop-shadow(0 26px 36px rgba(74, 42, 26, .4)); transform-origin: 50% 100%;
+          animation: balanca-cantor 4s ease-in-out infinite; }
+.ficha { position: absolute; border-radius: 50%; display: grid; place-items: center;
+         background: radial-gradient(circle, var(--mostarda-clara) 0 56%, var(--marrom) 57% 100%);
+         box-shadow: inset 0 0 0 12px var(--marrom-medio), 0 14px 26px rgba(74, 42, 26, .35); animation: gira-ficha 5s linear infinite; }
+.ficha b { font: 400 50px/1 var(--cartaz); color: var(--marrom); letter-spacing: 2px; }
+.escolhe { position: absolute; font: 900 70px/.98 var(--titulo); color: var(--marrom); letter-spacing: -1px; }
+.ao-vivo { display: inline-block; margin-top: 18px; background: var(--marrom); color: var(--creme); font: 700 36px/1 var(--texto);
+           letter-spacing: 3px; padding: 16px 22px 10px; }
+.rodape-info { position: absolute; left: 0; right: 0; background: var(--marrom); color: var(--creme); display: flex; }
+.rodape-info > div { flex: 1; text-align: center; padding: 26px 6px 22px; }
+.rodape-info > div + div { border-left: 3px solid rgba(246, 236, 214, .2); }
+.rodape-info small { display: block; font: 700 32px/1 var(--texto); letter-spacing: 2px; color: var(--mostarda-clara); }
+.rodape-info strong { display: block; font: 400 76px/1.05 var(--cartaz); margin-top: 8px; }
+.massa { position: absolute; left: 0; right: 0; text-align: center; font: 900 64px/1 var(--titulo); color: var(--marrom); }
+@keyframes corre { to { transform: translateX(-50%); } }
+@keyframes gira-ficha { to { transform: rotate(360deg); } }
+@keyframes balanca-cantor { 0%, 100% { transform: none; } 50% { transform: rotate(.8deg) translateY(4px); } }
+
+/* v3: foto inteira de ponta a ponta (sem recorte, sem moldura) */
+.foto-cheia { position: absolute; left: 0; right: 0; overflow: hidden; box-shadow: 0 -10px 30px rgba(74, 42, 26, .25); }
+.foto-cheia img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
+.adesivo { position: absolute; background: var(--marrom); color: var(--creme); padding: 26px 30px 22px; transform: rotate(-3deg);
+           box-shadow: 0 14px 30px rgba(0, 0, 0, .35); }
+.adesivo .escolhe { position: static; color: var(--creme); }
+.adesivo .ao-vivo { background: var(--mostarda-clara); color: var(--marrom); }
+.letreiro { z-index: 2; } .adesivo, .ficha { z-index: 3; }
