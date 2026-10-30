@@ -41,5 +41,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-10-27 tá lindo | Ladeira: bandeirinhas, título grande à esquerda, duas fotos reais da festa coladas como retrato | "Tá lindo!" |
 | 2026-10-27 som na rural | Cordel sobre vídeo: vídeo real da noite em tela cheia com som, dois cartões de papel com moldura de cordel (em cima e embaixo) | logos Som na Rural + Barrio |
 | 2026-10-29 dobradinha | Lambe-lambe de comida: TEM em vermelho, faixa marrom DOBRADINHA, foto colada com fita, barra de azulejo | "Vem almoçar com a gente" |
+| 2026-10-31 radiola de ficha | amarelo, cantor com violão dentro de arco de jukebox com lâmpadas piscando, faixa de 3 informações (estilo do post do DJ, sem disco) | "Vai ser muito massa" (frase da dona) |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
