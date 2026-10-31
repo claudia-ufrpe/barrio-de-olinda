@@ -10,4 +10,5 @@
 - Nunca use pergunta em anúncio (nada de "Bora almoçar?"). Frase de fechamento sempre afirmativa ou convite direto.
 - Logo do Barrio SEMPRE visível em toda peça.
 - Nada de "santinho": não colocar o artista centralizado dentro de arco/moldura/oval. Preferir cartaz de show: artista grande, sem moldura, saindo pela lateral; faixas inclinadas e letreiros.
+- O artista é o mais importante: NUNCA deixar faixa, letreiro, selo ou texto encostar na cabeça/rosto. Deixe folga acima da cabeça; se preciso, desça a foto/vídeo.
 - Não invente informação (preço, horário, "só hoje"). Se faltar, pergunte.
