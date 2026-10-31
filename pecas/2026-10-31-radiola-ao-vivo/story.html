@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Story — Radiola de Ficha ao vivo</title>
+<link rel="stylesheet" href="../../marca/barrio.css">
+<link rel="stylesheet" href="../../marca/simbolos.css">
+<link rel="stylesheet" href="../2026-10-31-radiola-de-ficha/radiola.css">
+<style>
+  /* vídeo real em tela cheia; topo amarelo com título e logo; letreiro inclinado; faixa de baixo de ponta a ponta */
+  .peca::before { display: none; }
+  .tela { position: absolute; inset: 0; }
+  .painel { position: absolute; top: 0; left: 0; right: 0; height: 400px;
+            background: radial-gradient(110% 120% at 50% 0%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+  .painel::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+  .topo { position: absolute; top: 175px; left: 50px; }
+  .apresenta { font-size: 38px; }
+  .titulo { font-size: 100px; margin-top: 8px; white-space: nowrap; }
+  .logo-barrio { top: 175px; right: 36px; width: 150px; height: 150px; }
+  .letreiro { top: 370px; } .letreiro span { font-size: 64px; padding: 18px 0 10px; }
+  .agora { position: absolute; top: 500px; right: 40px; background: var(--mostarda-clara); color: var(--marrom);
+           font: 700 40px/1 var(--texto); letter-spacing: 3px; padding: 18px 24px 12px; transform: rotate(3deg);
+           box-shadow: 0 10px 24px rgba(0, 0, 0, .35); }
+  .base { position: absolute; left: 0; right: 0; top: 1560px; background: var(--marrom); color: var(--creme); text-align: center; }
+  .base .escolhe-txt { font: 900 60px/1.05 var(--titulo); padding: 26px 20px 16px; }
+  .base .linha { display: flex; align-items: center; justify-content: center; gap: 0; background: var(--mostarda-clara); color: var(--marrom); }
+  .base .linha div { flex: 1; display: flex; align-items: center; justify-content: center; font: 700 34px/1 var(--texto); letter-spacing: 2px; padding: 18px 6px 12px; }
+  .base .linha b { font: 400 50px/1 var(--cartaz); margin-left: 8px; letter-spacing: 0; }
+</style>
+</head>
+<body>
+<div class="peca story" data-duracao="15.433333">
+  <div class="tela" data-video="../../videos/baracho-radiola-2026-10-31.mp4" data-atras></div>
+  <div class="painel"></div>
+  <div class="letreiro"><div class="corre"><span>AO VIVO NO BARRIO</span><span>AO VIVO NO BARRIO</span><span>AO VIVO NO BARRIO</span><span>AO VIVO NO BARRIO</span><span>AO VIVO NO BARRIO</span><span>AO VIVO NO BARRIO</span></div></div>
+  <div class="topo">
+    <div class="apresenta a-sobe">BARACHO APRESENTA</div>
+    <div class="titulo a-sobe d1">Radiola de Ficha</div>
+  </div>
+  <div class="logo-barrio"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></div>
+  <div class="base a-sobe d2">
+    <div class="escolhe-txt">Você escolhe a música, ele toca</div>
+    <div class="linha"><div>VOZ E VIOLÃO</div><div>COUVERT <b>R$ 15</b></div></div>
+  </div>
+</div>
+</body>
+</html>
