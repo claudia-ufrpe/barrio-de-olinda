@@ -43,5 +43,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-10-29 dobradinha | Lambe-lambe de comida: TEM em vermelho, faixa marrom DOBRADINHA, foto colada com fita, barra de azulejo | "Vem almoçar com a gente" |
 | 2026-10-31 radiola de ficha | cartaz de show: cantor grande sem moldura à direita, faixa marrom inclinada com letreiro correndo, ficha girando, faixa de informações de ponta a ponta, logo no topo | "Vai ser muito massa" (frase da dona) |
 | 2026-10-31 radiola ao vivo | vídeo real na íntegra com som, topo amarelo com título e logo, letreiro "Ao vivo no Barrio" correndo, faixa de baixo marrom/amarela | "Você escolhe a música, ele toca" |
+| 2026-11-02 fechado finados | aviso sóbrio: amarelo com fachada suave, logo grande no centro, faixa marrom FECHADOS de ponta a ponta | "Até breve." |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.

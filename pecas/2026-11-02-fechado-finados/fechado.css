@@ -1,0 +1,14 @@
+/* Aviso de fechado (Finados): sóbrio, sem festa. Amarelo do Barrio, fachada suave, logo grande, faixa marrom reta. */
+.peca.amarelo { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.peca.amarelo::before { opacity: .5; }
+.fachada { position: absolute; inset: 0; background: url("../../fotos/fachada-barrio.jpg") center 30% / cover;
+           opacity: .09; mix-blend-mode: multiply; filter: grayscale(.4); }
+.conteudo { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.logo-grande { border-radius: 50%; background: var(--marrom); display: grid; place-items: center; box-shadow: 0 14px 30px rgba(74, 42, 26, .3); }
+.logo-grande img { width: 66%; }
+.hoje { font: 700 50px/1 var(--texto); letter-spacing: 5px; color: var(--marrom-medio); }
+.faixa-fechado { align-self: stretch; background: var(--marrom); color: var(--mostarda-clara); font: 400 150px/1 var(--cartaz);
+                 letter-spacing: 6px; padding: 40px 0 26px; }
+.motivo { font: 900 76px/1.05 var(--titulo); color: var(--marrom); letter-spacing: -1px; }
+.data { font: 700 46px/1 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+.fecho { font: 600 52px/1.2 var(--titulo); color: var(--marrom); }
