@@ -4,7 +4,7 @@
 .folheto { position: absolute; transform: rotate(-1.6deg); box-shadow: 0 30px 60px rgba(74, 42, 26, .35), 0 4px 0 #e8dcbf;
            padding: 34px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .folheto::after { content: ""; position: absolute; inset: 14px; border: 3px solid var(--marrom); pointer-events: none; }
-.gravura { width: 100%; aspect-ratio: 900/620; background: url("../../marca/simbolos/xilo-barrio.svg") center / 100% 100%; }
+.gravura { width: 100%; aspect-ratio: 900/560; background: url("../../marca/simbolos/xilo-barrio.svg") center / 100% 100%; }
 .convite { font: 700 34px/1 var(--texto); letter-spacing: 8px; color: var(--marrom-medio); }
 .titulo { font: 400 76px/1 var(--cartaz); color: var(--marrom); letter-spacing: 2px; }
 .titulo .dez { font-size: 1.9em; line-height: .9; display: block; }
