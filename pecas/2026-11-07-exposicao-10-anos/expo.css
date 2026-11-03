@@ -1,31 +1,25 @@
-/* Convite: Exposição 10 anos do Barrio — Cordel no amarelo: moldura de filete, "10" grande, lista de artistas em duas colunas */
+/* Convite Exposição 10 anos — folheto de cordel em papel creme, torto sobre o amarelo, com xilogravura de Olinda */
 .peca.amarelo { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
-.peca.amarelo::before { opacity: .45; }
-.fachada { position: absolute; inset: 0; background: url("../../fotos/fachada-barrio.jpg") center 30% / cover; opacity: .08; mix-blend-mode: multiply; filter: grayscale(.4); }
-.moldura { position: absolute; border: 6px solid var(--marrom); }
-.moldura::after { content: ""; position: absolute; inset: 12px; border: 2px solid var(--marrom); }
-.miolo { position: absolute; display: flex; flex-direction: column; align-items: center; text-align: center; }
-.logo-barrio { border-radius: 50%; background: var(--marrom); display: grid; place-items: center; box-shadow: 0 10px 22px rgba(74, 42, 26, .3); }
+.peca.amarelo::before { opacity: .55; }
+.folheto { position: absolute; transform: rotate(-1.6deg); box-shadow: 0 30px 60px rgba(74, 42, 26, .35), 0 4px 0 #e8dcbf;
+           padding: 34px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.folheto::after { content: ""; position: absolute; inset: 14px; border: 3px solid var(--marrom); pointer-events: none; }
+.gravura { width: 100%; aspect-ratio: 900/520; background: url("../../marca/simbolos/xilo-olinda.svg") center / 100% 100%; }
+.convite { font: 700 34px/1 var(--texto); letter-spacing: 8px; color: var(--marrom-medio); }
+.titulo { font: 400 76px/1 var(--cartaz); color: var(--marrom); letter-spacing: 2px; }
+.titulo .dez { font-size: 1.9em; line-height: .9; display: block; }
+.anos { display: inline-block; background: var(--mostarda); color: var(--marrom); font: 700 34px/1 var(--texto); letter-spacing: 4px; padding: 12px 22px 6px; }
+.memo { font: 600 34px/1.15 var(--titulo); color: var(--marrom-medio); font-style: italic; }
+.memo b { display: block; font: 900 58px/1.05 var(--titulo); font-style: normal; color: var(--marrom); }
+.tecnicas { font: 700 30px/1.2 var(--texto); letter-spacing: 2px; color: var(--marrom); border-top: 2px solid var(--marrom); border-bottom: 2px solid var(--marrom); padding: 12px 6px 6px; }
+.artistas { display: grid; grid-template-columns: 1fr 1fr; column-gap: 34px; row-gap: 4px; text-align: left; font: 700 40px/1.2 var(--titulo); color: var(--marrom); }
+.colab { font: 600 30px/1.2 var(--texto); color: var(--marrom-medio); } .colab b { color: var(--marrom); }
+.logo-barrio { position: absolute; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; box-shadow: 0 10px 22px rgba(74, 42, 26, .35); z-index: 2; }
 .logo-barrio img { width: 66%; }
-.convite { font: 700 40px/1 var(--texto); letter-spacing: 6px; color: var(--marrom-medio); }
-.expo { font: 400 64px/1 var(--cartaz); letter-spacing: 8px; color: var(--marrom); }
-.dez { display: flex; align-items: center; gap: 26px; }
-.dez b { font: 900 300px/.8 var(--titulo); color: var(--marrom); letter-spacing: -10px; }
-.dez span { text-align: left; font: 900 96px/.9 var(--titulo); color: var(--marrom); }
-.dez span small { display: block; font: 700 40px/1 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); margin-top: 14px; }
-.faixa-memo { align-self: stretch; background: var(--marrom); color: var(--creme); padding: 24px 20px 20px; }
-.faixa-memo small { display: block; font: 700 30px/1 var(--texto); letter-spacing: 5px; color: var(--mostarda-clara); }
-.faixa-memo strong { display: block; font: 900 66px/1.05 var(--titulo); margin-top: 8px; }
-.tecnicas { font: 700 38px/1.2 var(--texto); letter-spacing: 2px; color: var(--marrom); }
-.artistas { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 8px; text-align: left;
-            font: 700 46px/1.15 var(--titulo); color: var(--marrom); }
-.artistas div::before { content: "◆"; font-size: .5em; vertical-align: middle; margin-right: 14px; color: var(--marrom-medio); }
-.colab { font: 600 36px/1.2 var(--texto); color: var(--marrom-medio); }
-.colab b { color: var(--marrom); font-weight: 700; }
-.quando { align-self: stretch; display: flex; background: var(--marrom); color: var(--creme); }
-.quando > div { flex: 1; padding: 22px 8px 18px; }
+.quando { position: absolute; left: 0; right: 0; display: flex; background: var(--marrom); color: var(--creme); }
+.quando > div { flex: 1; text-align: center; padding: 22px 8px 18px; }
 .quando > div + div { border-left: 3px solid rgba(246, 236, 214, .2); }
 .quando small { display: block; font: 700 28px/1 var(--texto); letter-spacing: 3px; color: var(--mostarda-clara); }
 .quando strong { display: block; font: 400 58px/1.1 var(--cartaz); margin-top: 8px; }
 .quando strong.menor { font: 900 40px/1.15 var(--titulo); margin-top: 10px; }
-.fecho { font: 900 54px/1 var(--titulo); color: var(--marrom); }
+.fecho { position: absolute; left: 0; right: 0; text-align: center; font: 900 54px/1 var(--titulo); color: var(--marrom); }
