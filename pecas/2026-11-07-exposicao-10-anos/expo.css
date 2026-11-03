@@ -24,3 +24,4 @@
 .quando strong.menor { font: 900 40px/1.15 var(--titulo); margin-top: 10px; }
 .fecho { position: absolute; left: 0; right: 0; text-align: center; font: 900 54px/1 var(--titulo); color: var(--marrom); }
 .quando strong.data-ext { font: 900 44px/1.1 var(--titulo); margin-top: 8px; }
+.colab b { font: 900 1.45em/1 var(--titulo); margin-left: 8px; }
