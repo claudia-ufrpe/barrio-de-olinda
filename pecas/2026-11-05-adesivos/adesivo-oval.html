@@ -10,17 +10,14 @@
   .peca::before { display: none; }
   .adesivo { width: 2400px; height: 1800px; }
   svg { position: absolute; inset: 0; }
-  .gravura { position: absolute; left: 50%; top: 50%; width: 1120px; aspect-ratio: 900/560; transform: translate(-50%, -50%);
+  .gravura { position: absolute; left: 50%; top: 50%; width: 1080px; aspect-ratio: 900/560; transform: translate(-50%, -62%);
              background: url("../../marca/simbolos/xilo-barrio.svg") center / 100% 100%; }
-  .logo-selo { position: absolute; left: 50%; top: 140px; width: 320px; height: 320px; margin-left: -160px; border-radius: 50%;
-               background: #4a2a1a; display: grid; place-items: center; border: 12px solid #f6ecd6; }
+  .logo-selo { position: absolute; left: 50%; top: 110px; width: 320px; height: 320px; margin-left: -160px; border-radius: 50%;
+               background: #e2a210; display: grid; place-items: center; border: 10px solid #4a2a1a; }
   .logo-selo img { width: 66%; }
-  .selo10 { position: absolute; right: 250px; top: 220px; width: 440px; height: 440px; border-radius: 50%; background: #4a2a1a;
-            border: 12px solid #f7c535; outline: 6px solid #4a2a1a; display: flex; flex-direction: column; align-items: center; justify-content: center;
-            transform: rotate(10deg); color: #f6ecd6; text-align: center; box-shadow: 0 12px 24px rgba(74,42,26,.3); }
-  .selo10 b { font: 400 180px/.85 "Alfa Slab One", serif; color: #f7c535; }
-  .selo10 span { font: 700 54px/1 "Josefin Sans", sans-serif; letter-spacing: 4px; margin-top: 8px; }
-  .selo10 small { font: 700 40px/1 "Josefin Sans", sans-serif; letter-spacing: 2px; margin-top: 10px; color: #f7c535; }
+  .faixa10 { position: absolute; left: 50%; top: 1200px; transform: translateX(-50%); background: #4a2a1a; color: #f6ecd6;
+             padding: 26px 60px 16px; white-space: nowrap; font: 700 56px/1 "Josefin Sans", sans-serif; letter-spacing: 6px; }
+  .faixa10 b { font: 400 76px/1 "Alfa Slab One", serif; color: #e2a210; letter-spacing: 2px; margin-right: 18px; }
 </style>
 </head>
 <body>
@@ -28,7 +25,7 @@
   <svg viewBox="0 0 2400 1800">
     <defs>
       <filter id="papel"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 .29 0 0 0 0 .16 0 0 0 0 .1 0 0 0 .08 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
-      <path id="baixo" d="M 220 900 A 980 700 0 0 0 2180 900"/>
+      <path id="baixo" d="M 200 860 A 1000 760 0 0 0 2200 860"/>
     </defs>
     <ellipse cx="1200" cy="900" rx="1190" ry="890" fill="#4a2a1a"/>
     <ellipse cx="1200" cy="900" rx="1140" ry="840" fill="#f7c535"/>
@@ -39,8 +36,8 @@
     <text font-family="Josefin Sans" font-weight="700" font-size="72" fill="#4a2a1a" letter-spacing="5" text-anchor="middle" dy="-14"><textPath href="#baixo" startOffset="50%">AV. DR. JOAQUIM NABUCO, 5 · VARADOURO · OLINDA-PE</textPath></text>
   </svg>
   <div class="gravura"></div>
-  <div class="selo10"><b>10</b><span>ANOS</span><small>2016 – 2026</small></div>
-  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></div>
+  <div class="faixa10"><b>10 ANOS</b>2016 – 2026</div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
 </div>
 </body>
 </html>
