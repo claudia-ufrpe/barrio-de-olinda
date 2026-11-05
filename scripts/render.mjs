@@ -4,6 +4,7 @@
 // - elemento com data-video="caminho.mp4": o vídeo é encaixado nesse espaço (com o áudio dele).
 //   Com data-atras, o vídeo fica atrás de tudo (texto e estrelas por cima).
 // - .peca com data-duracao="20": duração própria em segundos (ex.: reels).
+// - .peca com data-transparente (junto com data-estatico): PNG com fundo transparente (ex.: adesivo).
 import { chromium } from "playwright";
 import { execFileSync } from "node:child_process";
 import { mkdirSync, rmSync, readdirSync } from "node:fs";
@@ -31,7 +32,9 @@ for (const arq of readdirSync(pasta).filter((f) => f.endsWith(".html"))) {
 
   if (await page.$(".peca[data-estatico]")) {
     await vai(ANIM);
-    await peca.screenshot({ path: join(saida, `${nome}.png`) });
+    const transp = !!(await page.$(".peca[data-transparente]"));
+    if (transp) await page.addStyleTag({ content: "html, body, .peca { background: transparent !important; }" });
+    await peca.screenshot({ path: join(saida, `${nome}.png`), omitBackground: transp });
     console.log(`${nome}: ${saida}/${nome}.png`);
     await page.close();
     continue;
