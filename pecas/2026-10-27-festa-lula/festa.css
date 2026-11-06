@@ -1,0 +1,43 @@
+/* Festa do Lula — linguagem Lambe-lambe (cartaz de militância colado no muro) — ver pesquisa/estetica.md */
+.fundo-barrio { position: absolute; inset: 0; background: url("../../fotos/fachada-barrio.jpg") center 30% / cover;
+                opacity: .2; mix-blend-mode: multiply; filter: grayscale(.3) contrast(1.2); }
+.cartaz { position: absolute; inset: 0; display: flex; flex-direction: column; }
+.faixa-txt { text-align: center; font-family: var(--cartaz); line-height: .95; white-space: nowrap; }
+.chamada-festa { align-self: center; background: var(--marrom); color: var(--creme); font: 700 50px/1.15 var(--texto);
+                 letter-spacing: 3px; text-align: center; padding: 20px 44px 12px; transform: rotate(-1.5deg);
+                 box-shadow: 0 8px 0 var(--vermelho); }
+.presidente { color: var(--marrom); font-size: 128px; letter-spacing: 2px; }
+.lula { background: var(--vermelho); color: var(--creme); font-size: 300px; letter-spacing: 8px; padding: 26px 0 0;
+        text-shadow: 6px 6px 0 var(--marrom); position: relative; }
+.foto-lambe { position: relative; align-self: center; background: var(--creme); padding: 14px; transform: rotate(-2deg);
+              box-shadow: 0 18px 30px rgba(74, 42, 26, .35); }
+.foto-lambe .janela { overflow: hidden; position: relative; }
+.foto-lambe img { width: 100%; height: 100%; object-fit: cover; object-position: 45% 38%; display: block;
+                  filter: contrast(1.1) saturate(1.05); }
+.foto-lambe .janela::after { content: ""; position: absolute; inset: 0; mix-blend-mode: multiply; opacity: .45;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='g'><feTurbulence type='turbulence' baseFrequency='.55' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 .29  0 0 0 0 .16  0 0 0 0 .1  0 0 0 -.9 .55'/></filter><rect width='220' height='220' filter='url(%23g)'/></svg>"); }
+.fita { position: absolute; width: 150px; height: 46px; background: rgba(246, 236, 214, .82); box-shadow: 0 2px 4px rgba(0,0,0,.15); }
+.selo-81 { position: absolute; display: grid; place-items: center; border-radius: 50%; background: var(--marrom); color: var(--creme);
+           border: 6px solid var(--creme); text-align: center; font: 700 30px/1 var(--texto); letter-spacing: 2px; transform: rotate(10deg); }
+.selo-81 b { display: block; font: 400 104px/.9 var(--cartaz); color: var(--mostarda-clara); letter-spacing: 0; }
+.quando { background: var(--marrom); color: var(--mostarda-clara); font-size: 84px; padding: 22px 0 10px; letter-spacing: 3px; }
+.atracao { color: var(--marrom); font-size: 116px; }
+.orq { color: #fff; font-size: 62px; text-shadow: 3px 3px 0 var(--marrom), -1px -1px 0 var(--marrom), 1px -1px 0 var(--marrom), -1px 1px 0 var(--marrom); }
+.conv { color: var(--marrom); font-size: 56px; }
+.rodape { display: flex; align-items: center; justify-content: space-between; padding: 0 50px; }
+.couvert { font: 700 46px/1 var(--texto); color: var(--marrom); letter-spacing: 2px; border: 5px solid var(--marrom); padding: 18px 26px 10px; }
+.couvert b { font: 400 66px/1 var(--cartaz); color: #fff; text-shadow: 3px 3px 0 var(--marrom), -1px -1px 0 var(--marrom), 1px -1px 0 var(--marrom), -1px 1px 0 var(--marrom); letter-spacing: 0; margin-left: 8px; }
+.logos { display: flex; gap: 22px; align-items: center; }
+.logos .snr { width: 150px; height: 150px; border-radius: 50%; border: 5px solid var(--marrom); }
+.logos .barrio { width: 150px; height: 150px; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; }
+.logos .barrio img { width: 66%; }
+.estrela-xilo.grande { animation: gira-sol 30s linear infinite; }
+.estrela-xilo.p { width: 56px; height: 56px; }
+
+/* fundo claro: amarelo do Barrio sem escurecer as bordas */
+.peca.festa { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.peca.festa .fundo-barrio { opacity: .11; }
+.peca.festa.xilo::after { opacity: .22; }
+/* estrelas dentro da linha do texto, nunca atrás dele */
+.linha { display: flex; align-items: center; justify-content: center; gap: 28px; }
+.linha .estrela-xilo { position: static; flex: none; }

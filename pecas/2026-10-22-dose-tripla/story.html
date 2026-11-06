@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Story — Dose tripla</title>
+<link rel="stylesheet" href="../../marca/barrio.css">
+<style>
+  /* Layout "vídeo em tela cheia": o vídeo ocupa tudo, texto só em duas peças por cima */
+  .peca::before { display: none; }
+  .tela { position: absolute; inset: 0; }
+
+  .ingresso { position: absolute; top: 200px; left: 40px; padding: 18px 34px 22px; border-radius: 22px;
+              background: var(--mostarda); border: 6px solid var(--creme); text-align: center;
+              box-shadow: 0 14px 30px rgba(0, 0, 0, .45); }
+  .ingresso small { display: block; font: 700 40px/1 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+  .ingresso strong { display: block; font: 900 120px/1 var(--titulo); color: var(--marrom); }
+
+  .logo-selo { position: absolute; top: 205px; right: 40px; width: 170px; height: 170px; border-radius: 50%;
+               background: var(--creme); display: grid; place-items: center;
+               box-shadow: 0 10px 24px rgba(0, 0, 0, .45); }
+  .logo-selo img { width: 110px; }
+
+  .cartao { position: absolute; left: 40px; right: 40px; top: 1300px; border-radius: 30px; overflow: hidden;
+            background: radial-gradient(90% 120% at 50% 0%, var(--mostarda-clara), var(--mostarda) 60%, var(--mostarda-escura));
+            border: 6px solid var(--creme); box-shadow: 0 -10px 40px rgba(0, 0, 0, .45); }
+  .cartao::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+  .cartao .miolo { position: relative; padding: 30px 40px 26px; }
+  .cartao .pre { font: 700 36px/1 var(--texto); letter-spacing: 2px; color: var(--marrom-medio); }
+  .cartao h1 { font: 900 96px/1 var(--titulo); letter-spacing: -1px; margin-top: 12px; }
+  .dose { position: absolute; top: 1250px; right: 70px; background: var(--marrom); color: var(--creme);
+          font: 700 34px/1 var(--titulo); padding: 12px 20px 14px; border: 4px solid var(--creme); border-radius: 12px; transform: rotate(4deg); }
+  .cartao p { font: 600 40px/1.2 var(--texto); margin-top: 12px; }
+  .cartao p b { font-weight: 700; }
+  .rodape { position: relative; background: var(--marrom); color: var(--creme); text-align: center;
+            font: 700 36px/1 var(--texto); padding: 22px 10px 18px; letter-spacing: .5px; }
+</style>
+</head>
+<body>
+<div class="peca story">
+  <div class="tela" data-video="../../videos/musica-2026-10-22-tela-cheia.mp4" data-atras></div>
+
+  <div class="ingresso a-carimbo"><small>HOJE</small><strong>19h</strong></div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
+
+  <div class="cartao a-sobe">
+    <div class="miolo">
+      <div class="pre">PANDEIRADA DE ANIVERSÁRIO TRIPLO</div>
+      <h1>Ednardo Dali<br>Miguel Marinho</h1>
+      <p>Aniversário dos dois e do <b>presidente Lula</b></p>
+    </div>
+    <div class="rodape">Couvert R$ 20 · Av. Dr. Joaquim Nabuco, 5</div>
+  </div>
+
+  <div class="dose">Dose tripla</div>
+
+  <span class="estrela g" style="top: 175px; left: 20px;"></span>
+  <span class="estrela p d2" style="top: 400px; left: 330px;"></span>
+  <span class="estrela d1" style="top: 360px; right: 30px;"></span>
+  <span class="estrela d3" style="top: 1265px; left: 640px;"></span>
+  <span class="estrela p d2" style="top: 1270px; left: 60px;"></span>
+</div>
+</body>
+</html>
