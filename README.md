@@ -45,5 +45,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-10-31 radiola ao vivo | vídeo real na íntegra com som, topo amarelo com título e logo, letreiro "Ao vivo no Barrio" correndo, faixa de baixo marrom/amarela | "Você escolhe a música, ele toca" |
 | 2026-11-02 fechado finados | aviso sóbrio: amarelo com fachada suave, logo grande no centro, faixa marrom FECHADOS de ponta a ponta | "Até breve." |
 | 2026-11-07 exposição 10 anos | folheto de cordel em papel creme, torto sobre o amarelo, com xilogravura de Olinda (casario, Sé, sol, coqueiro); faixa marrom abertura/visitação | "Você é nosso convidado." |
+| 2026-11-07 story obrigado | fotos da abertura passando uma a uma num retrato grande (como álbum), OBRIGADO! no topo, faixa "a exposição continua" | "Venha ver de perto." |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
