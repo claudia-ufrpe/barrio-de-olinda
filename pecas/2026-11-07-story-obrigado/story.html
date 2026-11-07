@@ -10,8 +10,10 @@
 .retrato { position:absolute; left:80px; right:80px; top:560px; height:900px; background:var(--creme); padding:16px; transform:rotate(-1.2deg); box-shadow:0 24px 44px rgba(74,42,26,.35); }
 .janela { position:relative; width:100%; height:100%; overflow:hidden; }
 .janela img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%; opacity:0;
-              animation: ciclo 14s linear both; }
-@keyframes ciclo { 0%{opacity:0;transform:scale(1.08)} 2.5%{opacity:1} 14.29%{opacity:1} 16.79%{opacity:0;transform:scale(1)} 100%{opacity:0;transform:scale(1)} }
+              animation: ciclo 15s linear both; }
+@keyframes ciclo { 0%{opacity:0;transform:scale(1.06)} 2%{opacity:1} 10.00%{opacity:1} 12.00%{opacity:0;transform:scale(1)} 100%{opacity:0;transform:scale(1)} }
+.janela img.fim { animation-name: ciclo-fim; }
+@keyframes ciclo-fim { 0%{opacity:0;transform:scale(1.06)} 2%{opacity:1} 100%{opacity:1;transform:scale(1)} }
 .base { position:absolute; left:0; right:0; top:1520px; background:var(--marrom); color:var(--creme); text-align:center; padding:26px 20px 20px; }
 .base b { display:block; font:900 54px/1.1 var(--titulo); }
 .base span { display:block; font:700 36px/1.2 var(--texto); letter-spacing:2px; color:var(--mostarda-clara); margin-top:8px; }
@@ -21,7 +23,7 @@
 </style></head><body>
 <div class="peca story">
   <div class="topo"><small class="a-sobe">EXPOSIÇÃO 10 ANOS DO BARRIO</small><h1 class="a-sobe d1">OBRIGADO!</h1><div class="sub a-sobe d2">pela presença de todos e todas</div></div>
-  <div class="retrato"><div class="janela"><img src="../../fotos/expo-abertura/01.jpg" alt="" style="animation-delay:-0.3s"><img src="../../fotos/expo-abertura/24.jpg" alt="" style="animation-delay:1.7s"><img src="../../fotos/expo-abertura/26.jpg" alt="" style="animation-delay:3.7s"><img src="../../fotos/expo-abertura/23.jpg" alt="" style="animation-delay:5.7s"><img src="../../fotos/expo-abertura/11.jpg" alt="" style="animation-delay:7.7s"><img src="../../fotos/expo-abertura/13.jpg" alt="" style="animation-delay:9.7s"><img src="../../fotos/expo-abertura/08.jpg" alt="" style="animation-delay:11.7s"></div></div>
+  <div class="retrato"><div class="janela"><img src="../../fotos/expo-abertura/01.jpg" alt="" style="animation-delay:-0.2s"><img src="../../fotos/expo-abertura/24.jpg" alt="" style="animation-delay:1.3s"><img src="../../fotos/expo-abertura/26.jpg" alt="" style="animation-delay:2.8s"><img src="../../fotos/expo-abertura/23.jpg" alt="" style="animation-delay:4.3s"><img src="../../fotos/expo-abertura/29.jpg" alt="" style="animation-delay:5.8s"><img src="../../fotos/expo-abertura/11.jpg" alt="" style="animation-delay:7.3s"><img src="../../fotos/expo-abertura/30.jpg" alt="" style="animation-delay:8.8s"><img src="../../fotos/expo-abertura/13.jpg" alt="" style="animation-delay:10.3s"><img src="../../fotos/expo-abertura/31.jpg" alt="" style="animation-delay:11.8s"><img src="../../fotos/expo-abertura/08.jpg" alt="" style="animation-delay:13.3s" class="fim"></div></div>
   <div class="logo-barrio"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></div>
   <div class="base"><b>A exposição continua</b><span>VISITAÇÃO DAS 11h ÀS 21h</span></div>
   <div class="fecho">Venha ver de perto.</div>
