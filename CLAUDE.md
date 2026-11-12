@@ -13,3 +13,4 @@
 - O artista é o mais importante: NUNCA deixar faixa, letreiro, selo ou texto encostar na cabeça/rosto. Deixe folga acima da cabeça; se preciso, desça a foto/vídeo.
 - Imagem para WhatsApp que vai junto com texto: fazer QUADRADA (1080x1080), senão o WhatsApp corta a prévia.
 - Não invente informação (preço, horário, "só hoje"). Se faltar, pergunte.
+- A FOTO É O MAIS IMPORTANTE, SEMPRE. Ela ocupa a peça inteira (tela cheia, de ponta a ponta). Nada de grandes áreas vazias de amarelo com a foto pequena ou só num pedaço. O texto vai por cima da foto (com sombra/degradê suave para ler), em blocos compactos, sem cobrir o que a foto tem de bonito.
