@@ -48,5 +48,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-11-07 story obrigado | fotos da abertura passando uma a uma num retrato grande (como álbum), OBRIGADO! no topo, faixa "a exposição continua" | "Venha ver de perto." |
 | 2026-11-10 mosaico pratos | mosaico de 3 fotos em quadros creme com nome em faixa marrom, sobre amarelo (story + WhatsApp quadrado) | "Vem almoçar com a gente." |
 | 2026-11-12 prontinho te esperando | foto real do salão em tela cheia, texto creme sobre o teto (degradê marrom suave), foto se dissolvendo num pé amarelo com azulejo, frase marrom grande | "Vem pra cá!" |
+| 2026-11-12 tá todo mundo aqui | igual ao "prontinho" (versão mostarda): foto do salão cheio em tela cheia, texto creme sobre o teto, pé mostarda pequeno | "Vem pra cá!" (pedido da dona) |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
