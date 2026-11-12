@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>WhatsApp — Sexta Retrô</title>
+<link rel="stylesheet" href="../../marca/barrio.css">
+<link rel="stylesheet" href="retro.css">
+<style>
+  .whats { width: 1080px; height: 1350px; }
+  .topo { position: absolute; top: 60px; left: 60px; }
+  .sexta { font-size: 44px; }
+  .nome-dj { font-size: 170px; margin-top: 14px; }
+  .logo-selo { position: absolute; top: 50px; right: 50px; width: 160px; height: 160px; border-radius: 50%;
+               background: var(--creme); display: grid; place-items: center; box-shadow: 0 10px 24px rgba(74, 42, 26, .3); }
+  .logo-selo img { width: 104px; }
+  .raios   { top: 0; left: -200px; width: 1400px; height: 1400px; }
+  .disco   { top: 330px; left: 330px; width: 700px; height: 700px; }
+  .reflexo { top: 330px; left: 330px; width: 700px; height: 700px; }
+  .dj      { top: 300px; left: 70px; width: 500px; }
+  .info    { left: 40px; right: 40px; top: 1060px; }
+  .info strong { font-size: 84px; }
+  .disco { animation: none; } /* imagem parada: nome do Barrio reto */
+</style>
+</head>
+<body>
+<div class="peca whats" data-estatico>
+  <div class="raios"></div>
+  <div class="disco"><div class="rotulo"><img src="../../marca/logo/barrio-logo-marrom.png" alt=""></div></div>
+  <div class="reflexo"></div>
+  <img class="dj" src="../../fotos/dj-yuri-recorte.png" alt="DJ Yuri">
+
+  <div class="topo">
+    <div class="sexta">SEXTA RETRÔ</div>
+    <div class="nome-dj">DJ Yuri</div>
+  </div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
+
+  <div class="info">
+    <div><small>SEXTA</small><strong>23/10</strong></div>
+    <div><small>A PARTIR DAS</small><strong>17h</strong></div>
+    <div><small>COUVERT</small><strong>R$ 10</strong></div>
+  </div>
+
+  <span class="estrela m" style="top: 300px; left: 600px;"></span>
+  <span class="estrela p" style="top: 250px; left: 1000px;"></span>
+  <span class="estrela p" style="top: 1010px; left: 90px;"></span>
+</div>
+</body>
+</html>
