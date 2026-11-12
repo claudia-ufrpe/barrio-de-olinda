@@ -47,5 +47,6 @@ O que muda de uma peça para outra: o layout e a frase de fechamento. Não repet
 | 2026-11-07 exposição 10 anos | folheto de cordel em papel creme, torto sobre o amarelo, com xilogravura de Olinda (casario, Sé, sol, coqueiro); faixa marrom abertura/visitação | "Você é nosso convidado." |
 | 2026-11-07 story obrigado | fotos da abertura passando uma a uma num retrato grande (como álbum), OBRIGADO! no topo, faixa "a exposição continua" | "Venha ver de perto." |
 | 2026-11-10 mosaico pratos | mosaico de 3 fotos em quadros creme com nome em faixa marrom, sobre amarelo (story + WhatsApp quadrado) | "Vem almoçar com a gente." |
+| 2026-11-12 prontinho te esperando | Ladeira: foto real do salão do Barrio sumindo no amarelo (embaixo no story, à direita no WhatsApp), texto grande à esquerda, faixa marrom inclinada | "Vem pra cá!" |
 
 Microanimações (desde 2026-10-20): estrelas pulsando e girando, foto se aproximando devagar, fundo deslizando, selo balançando, brilho na faixa a cada 4,5 s.
