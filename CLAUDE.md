@@ -14,3 +14,4 @@
 - Imagem para WhatsApp que vai junto com texto: fazer QUADRADA (1080x1080), senão o WhatsApp corta a prévia.
 - Não invente informação (preço, horário, "só hoje"). Se faltar, pergunte.
 - A FOTO É O MAIS IMPORTANTE, SEMPRE. Ela ocupa a peça inteira (tela cheia, de ponta a ponta). Nada de grandes áreas vazias de amarelo com a foto pequena ou só num pedaço. O texto vai por cima da foto (com sombra/degradê suave para ler), em blocos compactos, sem cobrir o que a foto tem de bonito.
+- Nada de faixa AMARELA inclinada sobre a foto: parece fita de "interditado". Para fechar a peça, a foto se dissolve num pé amarelo do Barrio (com azulejo) e a frase vai ali, em marrom grande.
