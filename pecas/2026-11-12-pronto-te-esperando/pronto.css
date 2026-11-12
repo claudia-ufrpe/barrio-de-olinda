@@ -14,3 +14,7 @@
 .texto p { font: 600 52px/1.25 var(--texto); margin-top: 22px; }
 .chamada { position: absolute; left: 0; right: 0; z-index: 2; text-align: center; color: var(--marrom);
            font: 900 130px/1 var(--titulo); letter-spacing: -2px; }
+/* versão bege (pedido da dona em 12/11) */
+.peca.bege { background: radial-gradient(120% 60% at 50% 100%, #fbf4e4 0%, var(--creme) 50%, #e9d8b4 100%); }
+/* versão amarelo da marca, pé menor (pedido da dona em 12/11) */
+.peca.marca { background: var(--mostarda); }
