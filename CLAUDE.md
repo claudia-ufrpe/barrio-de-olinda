@@ -17,7 +17,7 @@
 - Nada de faixa AMARELA inclinada sobre a foto: parece fita de "interditado". Para fechar a peça, a foto se dissolve num pé amarelo do Barrio (com azulejo) e a frase vai ali, em marrom grande.
 - Preferência da dona (12/11/2026): o amarelo é o MOSTARDA da marca (#e2a210, liso), não o amarelo claro. O pé amarelo fica pequeno, só no finalzinho, para a foto ter mais espaço.
 - Show com vídeo (aprovado com Elaine Flor, 19/11/2026):
-  - STORY: vídeo em tela cheia; topo mostarda pequeno com azulejo (logo + nome do artista bem no alto, ~90px do topo) e pé mostarda pequeno com azulejo (dia · data · hora + "AQUI NO BARRIO" perto do pé). Palavras SEMPRE inteiras dentro do amarelo, nunca por cima do vídeo. Pouco espaço vazio em cima e embaixo.
+  - STORY: vídeo em tela cheia; topo mostarda pequeno com azulejo (logo + nome do artista bem no alto, ~90px do topo) e pé mostarda pequeno com azulejo (dia · data · hora + "AQUI NO BARRIO" ACIMA dos 170px de baixo, onde fica a caixa de resposta; ~y 1585). Palavras SEMPRE inteiras dentro do amarelo, nunca por cima do vídeo. Pouco espaço vazio em cima e embaixo.
   - REELS: é VÍDEO (nunca estático), versão própria. Palavras dentro da área segura (entre y=285 e y=1635, longe dos 150px da direita). Artista INTEIRO e proporcional (não cortar as pernas, pouca parede); se preciso, diminuir o vídeo e preencher as laterais com o próprio vídeo desfocado.
   - Divisa entre amarelo e vídeo: corte reto com sombrinha leve. SEM degradê/linha laranja entre o amarelo e o vídeo.
   - Mostarda com desenho de azulejo em TODAS as partes amarelas (story, reels, WhatsApp, feed).
