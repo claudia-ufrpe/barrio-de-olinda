@@ -1,0 +1,14 @@
+/* Elaine Flor — peças paradas: foto em quase toda a peça, topo e pé mostarda */
+.peca { background: var(--mostarda); }
+.peca::before { display: none; }
+.foto-show { position: absolute; left: 0; right: 0; overflow: hidden; }
+.foto-show img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; display: block; }
+.logo-barrio { position: absolute; border-radius: 50%; background: var(--marrom); display: grid; place-items: center;
+               box-shadow: 0 10px 22px rgba(74,42,26,.35); z-index: 3; }
+.logo-barrio img { width: 66%; }
+.nome { position: absolute; color: var(--marrom); z-index: 2; }
+.nome h1 { font: 900 120px/.92 var(--titulo); letter-spacing: -3px; }
+.nome .banda { font: 700 72px/1 var(--titulo); margin-top: 4px; }
+.quando { position: absolute; left: 0; right: 0; text-align: center; color: var(--marrom); z-index: 2; }
+.quando .dia { font: 400 70px/1 var(--cartaz); letter-spacing: 1px; }
+.quando .onde { font: 700 36px/1 var(--texto); letter-spacing: 6px; margin-top: 12px; }
