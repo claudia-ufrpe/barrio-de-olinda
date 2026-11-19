@@ -4,12 +4,12 @@
 <style>
 .peca::before { display: none; }
 .video { position: absolute; inset: 0; }
-.topo { position: absolute; left: 0; right: 0; top: 0; height: 470px;
+.topo { box-shadow: 0 6px 14px rgba(74,42,26,.35); position: absolute; left: 0; right: 0; top: 0; height: 380px;
         background: var(--padrao) center top / 120px 120px, var(--mostarda);
-        -webkit-mask-image: linear-gradient(to bottom, #000 340px, transparent 100%); mask-image: linear-gradient(to bottom, #000 340px, transparent 100%); }
-.pe { position: absolute; left: 0; right: 0; bottom: 0; height: 290px;
+        -webkit-mask-image: linear-gradient(to bottom, #000 100%, #000 100%); mask-image: linear-gradient(to bottom, #000 100%, #000 100%); }
+.pe { box-shadow: 0 -6px 14px rgba(74,42,26,.35); position: absolute; left: 0; right: 0; bottom: 0; height: 300px;
       background: var(--padrao) center bottom / 120px 120px, var(--mostarda);
-      -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 110px); mask-image: linear-gradient(to bottom, transparent 0, #000 110px); }
+      -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 100%); mask-image: linear-gradient(to bottom, #000 0, #000 100%); }
 .logo-barrio { position: absolute; top: 90px; left: 60px; width: 160px; height: 160px; border-radius: 50%; background: var(--marrom);
                display: grid; place-items: center; box-shadow: 0 10px 22px rgba(74,42,26,.35); z-index: 3; }
 .logo-barrio img { width: 66%; }
