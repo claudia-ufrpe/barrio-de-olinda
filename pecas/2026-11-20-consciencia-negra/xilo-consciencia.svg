@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <!-- Xilogravura: mulher negra de perfil com turbante e colares, sol atrás. Desenho próprio do Barrio. -->
+  <g fill="#4a2a1a">
+    <!-- ombros e colo -->
+    <path d="M60 1000 C110 900 230 860 330 845 L470 840 C560 860 690 900 760 1000 Z"/>
+    <!-- pescoço -->
+    <path d="M330 690 C340 760 345 820 330 870 L480 870 C470 830 470 790 482 760 Z"/>
+    <!-- rosto (perfil para a direita) -->
+    <path d="M300 420 C380 380 470 370 520 392 C540 420 552 450 560 478 C562 492 556 500 552 508
+             C568 535 590 560 606 580 C610 590 600 598 586 600 C580 606 572 608 566 610
+             C572 620 580 628 582 636 C586 646 580 652 572 655 C578 662 584 670 580 680
+             C574 690 566 696 566 708 C566 730 556 748 534 758 C512 768 490 770 470 772
+             C440 776 380 760 340 720 C300 680 285 560 300 420 Z"/>
+    <!-- turbante -->
+    <path d="M286 640 C230 600 200 520 210 430 C220 330 260 230 340 170 C410 115 500 100 560 140
+             C610 175 620 240 590 300 C575 335 556 380 546 422 C480 388 380 390 310 425
+             C300 480 296 560 286 640 Z"/>
+  </g>
+  <!-- cortes da madeira (linhas creme) -->
+  <g fill="none" stroke="#f6ecd6" stroke-linecap="round" stroke-width="9">
+    <!-- voltas do turbante -->
+    <path d="M250 520 C250 410 300 300 390 230 C450 185 520 170 565 190"/>
+    <path d="M300 410 C320 330 380 260 470 225 C520 208 565 215 590 240"/>
+    <path d="M236 450 C240 360 280 270 350 210"/>
+    <path d="M340 395 C380 340 440 300 520 290 C548 287 570 290 584 296"/>
+    <!-- olho fechado, sobrancelha, boca -->
+    <path d="M500 490 C512 500 528 502 540 494" stroke-width="7"/>
+    <path d="M496 466 C512 456 532 456 548 466" stroke-width="6"/>
+    <path d="M548 656 C556 660 566 660 574 656" stroke-width="6"/>
+    <!-- maçã do rosto -->
+    <path d="M470 580 C480 610 500 625 520 628" stroke-width="5" opacity=".7"/>
+    <!-- colares -->
+    <path d="M330 790 C380 815 440 815 482 792" stroke-width="10"/>
+    <path d="M326 822 C380 850 445 850 486 824" stroke-width="10"/>
+    <path d="M318 856 C380 890 450 890 494 858" stroke-width="10"/>
+    <!-- marcas de goiva no corpo -->
+    <path d="M170 960 l40 -30 M220 975 l40 -30 M600 935 l40 25 M560 965 l40 25" stroke-width="7" opacity=".8"/>
+  </g>
+  <!-- argola na orelha -->
+  <circle cx="380" cy="660" r="34" fill="none" stroke="#e2a210" stroke-width="10"/>
+</svg>

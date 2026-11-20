@@ -1,0 +1,20 @@
+/* Consciência Negra — aviso de fechado. Cordel (xilogravura) sobre mostarda com azulejo. Sem vermelho, sem estrela. */
+.peca { background: var(--mostarda); }
+.sol-fundo { position: absolute; background: url("sol.svg") no-repeat center / contain;
+             opacity: .9; animation: gira-sol 60s linear infinite; z-index: 1; }
+.xilo-mulher { position: absolute; background: url("xilo-consciencia.svg") no-repeat center bottom / contain; z-index: 2;
+               transform-origin: 50% 100%; animation: respira 6s ease-in-out 1.5s infinite; }
+@keyframes respira { 0%,100% { transform: scale(1); } 50% { transform: scale(1.015); } }
+.logo-barrio { position: absolute; border-radius: 50%; background: var(--marrom); display: grid; place-items: center;
+               box-shadow: 0 10px 22px rgba(74,42,26,.35); z-index: 3; }
+.logo-barrio img { width: 66%; }
+.aviso { position: absolute; color: var(--marrom); z-index: 3; }
+.aviso small { display: block; font: 700 46px/1 var(--texto); letter-spacing: 8px; }
+.aviso h1 { font: 900 150px/.88 var(--titulo); letter-spacing: -3px; margin-top: 10px; }
+.faixa-data { position: absolute; left: 0; right: 0; background: var(--marrom); color: var(--creme); z-index: 4;
+              text-align: center; box-shadow: 0 -6px 14px rgba(74,42,26,.3); }
+.faixa-data .dia { font: 700 38px/1 var(--texto); letter-spacing: 7px; color: var(--mostarda-clara); }
+.faixa-data .nome { font: 900 64px/1.05 var(--titulo); margin-top: 14px; }
+.volta { position: absolute; left: 0; right: 0; text-align: center; color: var(--marrom); z-index: 3; }
+.volta .titulo { font: 900 104px/1 var(--titulo); letter-spacing: -2px; }
+.volta .sub { font: 700 44px/1.2 var(--texto); margin-top: 14px; }
