@@ -1,0 +1,23 @@
+# Instruções para o Claude
+
+- Converse com a dona do projeto em linguagem de leigo: ela não entende de programação. Nada de termos técnicos (commit, branch, CSS, script, renderizar etc.). Explique o que mudou na peça, não como foi feito.
+- Você cria stories e posts para o Instagram do Barrio Café e Bar (Olinda-PE). Público: acima de 40 anos, de Olinda, de esquerda, que valoriza a cultura pernambucana. Letra grande, frases curtas, sem firulas.
+- Antes de criar qualquer peça, leia `pesquisa/estetica.md` e escolha UMA das três linguagens (Cordel, Ladeira, Lambe-lambe). Use os símbolos de `marca/simbolos/` e `marca/simbolos.css`.
+- Siga a identidade e as regras do README.md: cores, fontes, padrão de azulejo, estrelinhas vermelhas, entrada de no máximo 1,5 s com todo texto visível desde o início, microanimações até o fim, vídeo de 15 s.
+- Varie layout e frase de fechamento a cada peça (veja a tabela no README).
+- Sempre mande no chat as peças prontas (vídeo e imagem) assim que ficarem prontas.
+- Desde 29/10/2026 (eleição passou): NÃO usar vermelho nem estrelas, a menos que a dona peça. Evitar fundo bege/creme (ela acha sem graça): preferir o amarelo do Barrio.
+- Nunca use pergunta em anúncio (nada de "Bora almoçar?"). Frase de fechamento sempre afirmativa ou convite direto.
+- Logo do Barrio SEMPRE visível em toda peça.
+- Nada de "santinho": não colocar o artista centralizado dentro de arco/moldura/oval. Preferir cartaz de show: artista grande, sem moldura, saindo pela lateral; faixas inclinadas e letreiros.
+- O artista é o mais importante: NUNCA deixar faixa, letreiro, selo ou texto encostar na cabeça/rosto. Deixe folga acima da cabeça; se preciso, desça a foto/vídeo.
+- Imagem para WhatsApp que vai junto com texto: fazer QUADRADA (1080x1080), senão o WhatsApp corta a prévia.
+- Não invente informação (preço, horário, "só hoje"). Se faltar, pergunte.
+- A FOTO É O MAIS IMPORTANTE, SEMPRE. Ela ocupa a peça inteira (tela cheia, de ponta a ponta). Nada de grandes áreas vazias de amarelo com a foto pequena ou só num pedaço. O texto vai por cima da foto (com sombra/degradê suave para ler), em blocos compactos, sem cobrir o que a foto tem de bonito.
+- Nada de faixa AMARELA inclinada sobre a foto: parece fita de "interditado". Para fechar a peça, a foto se dissolve num pé amarelo do Barrio (com azulejo) e a frase vai ali, em marrom grande.
+- Preferência da dona (12/11/2026): o amarelo é o MOSTARDA da marca (#e2a210, liso), não o amarelo claro. O pé amarelo fica pequeno, só no finalzinho, para a foto ter mais espaço.
+- Show com vídeo (aprovado com Elaine Flor, 19/11/2026):
+  - STORY: vídeo em tela cheia; topo mostarda com azulejo até ~y 450 (logo + nome do artista a ~150px do topo, para não bater na margem do Instagram) e pé mostarda pequeno com azulejo (dia · data · hora + "AQUI NO BARRIO" ACIMA dos 170px de baixo, onde fica a caixa de resposta; pé começa ~y 1575, data ~y 1615). Palavras SEMPRE inteiras dentro do amarelo, nunca por cima do vídeo. Pouco espaço vazio em cima e embaixo.
+  - REELS: é VÍDEO (nunca estático), versão própria. Palavras dentro da área segura (entre y=285 e y=1635, longe dos 150px da direita). Artista INTEIRO e proporcional (não cortar as pernas, pouca parede); se preciso, diminuir o vídeo e preencher as laterais com o próprio vídeo desfocado.
+  - Divisa entre amarelo e vídeo: corte reto com sombrinha leve. SEM degradê/linha laranja entre o amarelo e o vídeo.
+  - Mostarda com desenho de azulejo em TODAS as partes amarelas (story, reels, WhatsApp, feed).

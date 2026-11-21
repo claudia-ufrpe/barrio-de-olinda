@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>WhatsApp — Dose tripla</title>
+<link rel="stylesheet" href="../../marca/barrio.css">
+<style>
+  /* Layout "vídeo em tela cheia": o vídeo ocupa tudo, texto só em duas peças por cima */
+  .peca::before { display: none; }
+  .tela { position: absolute; inset: 0; }
+
+  .ingresso { position: absolute; top: 200px; left: 40px; padding: 18px 34px 22px; border-radius: 22px;
+              background: var(--mostarda); border: 6px solid var(--creme); text-align: center;
+              box-shadow: 0 14px 30px rgba(0, 0, 0, .45); }
+  .ingresso small { display: block; font: 700 40px/1 var(--texto); letter-spacing: 3px; color: var(--marrom-medio); }
+  .ingresso strong { display: block; font: 900 120px/1 var(--titulo); color: var(--marrom); }
+
+  .logo-selo { position: absolute; top: 205px; right: 40px; width: 170px; height: 170px; border-radius: 50%;
+               background: var(--creme); display: grid; place-items: center;
+               box-shadow: 0 10px 24px rgba(0, 0, 0, .45); }
+  .logo-selo img { width: 110px; }
+
+  .cartao { position: absolute; left: 40px; right: 40px; top: 1300px; border-radius: 30px; overflow: hidden;
+            background: radial-gradient(90% 120% at 50% 0%, var(--mostarda-clara), var(--mostarda) 60%, var(--mostarda-escura));
+            border: 6px solid var(--creme); box-shadow: 0 -10px 40px rgba(0, 0, 0, .45); }
+  .cartao::before { content: ""; position: absolute; inset: 0; background-image: var(--padrao); background-size: 120px 120px; }
+  .cartao .miolo { position: relative; padding: 30px 40px 26px; }
+  .cartao .pre { font: 700 36px/1 var(--texto); letter-spacing: 2px; color: var(--marrom-medio); }
+  .cartao h1 { font: 900 96px/1 var(--titulo); letter-spacing: -1px; margin-top: 12px; }
+  .dose { position: absolute; top: 1250px; right: 70px; background: var(--marrom); color: var(--creme);
+          font: 700 34px/1 var(--titulo); padding: 12px 20px 14px; border: 4px solid var(--creme); border-radius: 12px; transform: rotate(4deg); }
+  .cartao p { font: 600 40px/1.2 var(--texto); margin-top: 12px; }
+  .cartao p b { font-weight: 700; }
+  .rodape { position: relative; background: var(--marrom); color: var(--creme); text-align: center;
+            font: 700 36px/1 var(--texto); padding: 22px 10px 18px; letter-spacing: .5px; }
+  /* ajustes para 1080x1350 */
+  .whats { width: 1080px; height: 1350px; }
+  .tela { width: 100%; height: 100%; object-fit: cover; object-position: 50% 68%; }
+  .ingresso { top: 36px; left: 36px; } .ingresso strong { font-size: 104px; }
+  .logo-selo { top: 36px; right: 36px; width: 160px; height: 160px; } .logo-selo img { width: 104px; }
+  .cartao { top: 930px; left: 30px; right: 30px; }
+  .cartao .miolo { padding: 24px 36px 20px; }
+  .cartao .pre { font-size: 32px; }
+  .cartao h1 { font-size: 78px; margin-top: 8px; }
+  .cartao p { font-size: 36px; margin-top: 8px; }
+  .rodape { font-size: 30px; padding: 18px 10px 14px; }
+  .dose { top: 885px; right: 60px; font-size: 30px; }
+</style>
+</head>
+<body>
+<div class="peca whats" data-estatico>
+  <img class="tela" src="../../fotos/musica-2026-10-22-tela-cheia.png" alt="">
+
+  <div class="ingresso a-carimbo"><small>HOJE · 22/10</small><strong>19h</strong></div>
+  <div class="logo-selo"><img src="../../marca/logo/barrio-logo-marrom.png" alt="Barrio Café e Bar"></div>
+
+  <div class="cartao a-sobe">
+    <div class="miolo">
+      <div class="pre">PANDEIRADA DE ANIVERSÁRIO TRIPLO</div>
+      <h1>Ednardo Dali<br>Miguel Marinho</h1>
+      <p>Aniversário dos dois e do <b>presidente Lula</b></p>
+    </div>
+    <div class="rodape">Couvert R$ 20 · Av. Dr. Joaquim Nabuco, 5 · Varadouro</div>
+  </div>
+
+  <div class="dose">Dose tripla</div>
+
+  <span class="estrela g" style="top: 4px; left: 360px;"></span>
+  <span class="estrela p" style="top: 230px; left: 330px;"></span>
+  <span class="estrela" style="top: 190px; right: 30px;"></span>
+  <span class="estrela" style="top: 900px; left: 600px;"></span>
+  <span class="estrela p" style="top: 905px; left: 50px;"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* Mosaico de pratos: amarelo do Barrio, fotos em quadros creme, nome do prato em faixa marrom */
+.peca.amarelo { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.prato { position: absolute; background: var(--creme); padding: 12px; box-shadow: 0 16px 30px rgba(74,42,26,.3); }
+.prato .janela { width: 100%; height: 100%; overflow: hidden; position: relative; }
+.prato img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.prato .nome { position: absolute; left: 0; right: 0; bottom: 0; background: var(--marrom); color: var(--creme);
+               font: 400 46px/1 var(--cartaz); letter-spacing: 1px; text-align: center; padding: 18px 10px 10px; }
+.logo-barrio { position: absolute; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; box-shadow: 0 10px 22px rgba(74,42,26,.35); z-index: 3; }
+.logo-barrio img { width: 66%; }
+.cab small { display: block; font: 700 36px/1 var(--texto); letter-spacing: 6px; color: var(--marrom-medio); }
+.cab h1 { font: 400 108px/1 var(--cartaz); color: var(--marrom); margin-top: 10px; }
+.fecho { position: absolute; left: 0; right: 0; text-align: center; font: 900 50px/1 var(--titulo); color: var(--marrom); }

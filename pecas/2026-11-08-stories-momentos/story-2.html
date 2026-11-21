@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Story — Obrigado Exposição</title>
+<link rel="stylesheet" href="../../marca/barrio.css"><link rel="stylesheet" href="../../marca/simbolos.css">
+<style>
+.peca { background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.topo { position:absolute; top:190px; left:0; right:0; text-align:center; }
+.topo small { display:block; font:700 40px/1 var(--texto); letter-spacing:10px; color:var(--marrom-medio); }
+.topo h1 { font:400 140px/1 var(--cartaz); color:var(--marrom); margin-top:14px; }
+.topo .sub { display:inline-block; margin-top:18px; background:var(--marrom); color:var(--creme); font:400 46px/1 var(--cartaz); letter-spacing:2px; padding:18px 34px 10px; transform:rotate(-1deg); }
+.retrato { position:absolute; left:80px; right:80px; top:560px; height:900px; background:var(--creme); padding:16px; transform:rotate(-1.2deg); box-shadow:0 24px 44px rgba(74,42,26,.35); }
+.janela { position:relative; width:100%; height:100%; overflow:hidden; }
+.janela img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%; opacity:0;
+              animation: ciclo 15s linear both; }
+@keyframes ciclo { 0%{opacity:0;transform:scale(1.06)} 2%{opacity:1} 10.00%{opacity:1} 12.00%{opacity:0;transform:scale(1)} 100%{opacity:0;transform:scale(1)} }
+.janela img.fim { animation-name: ciclo-fim; }
+@keyframes ciclo-fim { 0%{opacity:0;transform:scale(1.06)} 2%{opacity:1} 100%{opacity:1;transform:scale(1)} }
+.base { position:absolute; left:0; right:0; top:1520px; background:var(--marrom); color:var(--creme); text-align:center; padding:26px 20px 20px; }
+.base b { display:block; font:900 54px/1.1 var(--titulo); }
+.base span { display:block; font:700 36px/1.2 var(--texto); letter-spacing:2px; color:var(--mostarda-clara); margin-top:8px; }
+.logo-barrio { position:absolute; top:470px; right:40px; width:150px; height:150px; border-radius:50%; background:var(--marrom); display:grid; place-items:center; box-shadow:0 10px 22px rgba(74,42,26,.35); z-index:3; }
+.logo-barrio img { width:66%; }
+.fecho { position:absolute; left:0; right:0; top:1720px; text-align:center; font:900 48px/1 var(--titulo); color:var(--marrom); }
+</style></head><body>
+<div class="peca story">
+  <div class="topo"><small class="a-sobe">EXPOSIÇÃO 10 ANOS DO BARRIO</small><h1 class="a-sobe d1">MOMENTOS</h1><div class="sub a-sobe d2">da abertura · parte 2</div></div>
+  <div class="retrato"><div class="janela"><img src="../../fotos/expo-abertura/16.jpg" alt="" style="animation-delay:-0.20s"><img src="../../fotos/expo-abertura/17.jpg" alt="" style="animation-delay:1.30s"><img src="../../fotos/expo-abertura/18.jpg" alt="" style="animation-delay:2.80s"><img src="../../fotos/expo-abertura/19.jpg" alt="" style="animation-delay:4.30s"><img src="../../fotos/expo-abertura/20.jpg" alt="" style="animation-delay:5.80s"><img src="../../fotos/expo-abertura/21.jpg" alt="" style="animation-delay:7.30s"><img src="../../fotos/expo-abertura/22.jpg" alt="" style="animation-delay:8.80s"><img src="../../fotos/expo-abertura/25.jpg" alt="" style="animation-delay:10.30s"><img src="../../fotos/expo-abertura/27.jpg" alt="" style="animation-delay:11.80s"><img src="../../fotos/expo-abertura/28.jpg" alt="" style="animation-delay:13.30s" class="fim"></div></div>
+  <div class="logo-barrio"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></div>
+  <div class="base"><b>A exposição continua</b><span>VISITAÇÃO DAS 11h ÀS 21h</span></div>
+  <div class="fecho">Venha ver de perto.</div>
+</div></body></html>

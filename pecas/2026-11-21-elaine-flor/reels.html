@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Reels — Elaine Flor e Banda</title>
+<link rel="stylesheet" href="../../marca/barrio.css"><link rel="stylesheet" href="../../marca/simbolos.css">
+<style>
+.peca::before { display: none; }
+.video { position: absolute; inset: 0; }
+.topo { box-shadow: 0 6px 14px rgba(74,42,26,.35); position: absolute; left: 0; right: 0; top: 0; height: 520px;
+        background: var(--padrao) center top / 120px 120px, var(--mostarda);
+        -webkit-mask-image: linear-gradient(to bottom, #000 100%, #000 100%); mask-image: linear-gradient(to bottom, #000 100%, #000 100%); }
+.pe { box-shadow: 0 -6px 14px rgba(74,42,26,.35); position: absolute; left: 0; right: 0; bottom: 0; height: 440px;
+      background: var(--padrao) center bottom / 120px 120px, var(--mostarda);
+      -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 100%); mask-image: linear-gradient(to bottom, #000 0, #000 100%); }
+.logo-barrio { position: absolute; top: 300px; left: 60px; width: 160px; height: 160px; border-radius: 50%; background: var(--marrom);
+               display: grid; place-items: center; box-shadow: 0 10px 22px rgba(74,42,26,.35); z-index: 3; }
+.logo-barrio img { width: 66%; }
+.nome { position: absolute; top: 305px; left: 250px; right: 150px; color: var(--marrom);
+         }
+.nome h1 { font: 900 120px/.92 var(--titulo); letter-spacing: -3px; }
+.nome .banda { font: 700 84px/1 var(--titulo); margin-top: 6px; }
+.quando { position: absolute; left: 0; right: 150px; top: 1515px; text-align: center; color: var(--marrom); }
+.quando .dia { font: 400 64px/1 var(--cartaz); letter-spacing: 1px; }
+.quando .onde { font: 700 40px/1 var(--texto); letter-spacing: 6px; margin-top: 16px; }
+</style></head><body>
+<div class="peca story" data-duracao="17">
+  <div class="video" data-video="elaine-reels.mp4" data-atras></div>
+  <div class="topo"></div>
+  <div class="pe"></div>
+  <div class="logo-barrio"><img src="../../marca/logo/barrio-logo-creme.png" alt="Barrio Café e Bar"></div>
+  <div class="nome">
+    <h1 class="a-sobe">Elaine Flor</h1>
+    <div class="banda a-sobe d1">e Banda</div>
+  </div>
+  <div class="quando">
+    <div class="dia a-sobe d2">SÁBADO · 21/11 · 15H</div>
+    <div class="onde">AQUI NO BARRIO</div>
+  </div>
+</div></body></html>

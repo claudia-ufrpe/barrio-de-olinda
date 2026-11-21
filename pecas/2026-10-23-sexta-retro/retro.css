@@ -1,0 +1,39 @@
+/* Sexta Retrô: disco de vinil girando atrás do DJ, raios de sol retrô no fundo */
+.raios { position: absolute; border-radius: 50%;
+         background: repeating-conic-gradient(rgba(247, 197, 53, .55) 0 7.5deg, transparent 7.5deg 15deg);
+         -webkit-mask: radial-gradient(circle, #000 30%, transparent 70%);
+         animation: roda 60s linear infinite reverse; }
+.disco { position: absolute; border-radius: 50%;
+         background:
+           conic-gradient(from 0deg, rgba(255,255,255,.16) 0 4deg, transparent 14deg 120deg,
+                          rgba(255,255,255,.10) 128deg 132deg, transparent 145deg 230deg,
+                          rgba(226,162,16,.22) 236deg 240deg, transparent 252deg),
+           radial-gradient(circle, transparent 0 17%, rgba(255,255,255,.04) 17.5%, transparent 18%),
+           repeating-radial-gradient(circle, #1a1310 0 3px, #241a15 3px 6px);
+         box-shadow: 0 30px 60px rgba(74, 42, 26, .45), inset 0 0 0 10px #120d0b;
+         animation: roda 3s linear infinite; } /* uma volta a cada 3 s */
+.disco .rotulo { position: absolute; inset: 33%; border-radius: 50%; background: var(--mostarda);
+                 display: grid; place-items: center; box-shadow: inset 0 0 0 6px var(--mostarda-escura); }
+.disco .rotulo img { width: 62%; }
+.disco .rotulo::after { content: ""; position: absolute; width: 4%; height: 4%; border-radius: 50%; background: #1a1310; }
+.reflexo { position: absolute; border-radius: 50%; pointer-events: none;
+           background: conic-gradient(from 20deg, transparent 0 30deg, rgba(255,255,255,.10) 45deg, transparent 60deg,
+                                      transparent 200deg, rgba(255,255,255,.08) 215deg, transparent 230deg); }
+.dj { position: absolute; -webkit-mask: linear-gradient(#000 80%, transparent 97%);
+      filter: drop-shadow(0 0 3px var(--creme)) drop-shadow(0 0 3px var(--creme)) drop-shadow(0 26px 30px rgba(74, 42, 26, .45));
+      animation: sobe-dj 1.2s cubic-bezier(.25, .6, .3, 1) both, embala 1s ease-in-out 1.2s infinite; }
+.sexta { font: 700 50px/1 var(--texto); letter-spacing: 6px; color: var(--marrom-medio);
+         display: flex; align-items: center; gap: 18px; }
+.sexta::before, .sexta::after { content: ""; height: 5px; width: 70px; background: var(--vermelho); border-radius: 3px; }
+.nome-dj { font: 900 200px/.9 var(--titulo); letter-spacing: -4px; color: var(--marrom); }
+.info { position: absolute; display: flex; background: var(--marrom); color: var(--creme); border-radius: 30px;
+        border: 6px solid var(--creme); box-shadow: 0 16px 34px rgba(74, 42, 26, .45); overflow: hidden; }
+.info > div { flex: 1; text-align: center; padding: 26px 6px 22px; }
+.info > div + div { border-left: 3px solid rgba(246, 236, 214, .25); }
+.info small { display: block; font: 700 34px/1 var(--texto); letter-spacing: 2px; color: var(--mostarda-clara); }
+.info strong { display: block; font: 900 92px/1 var(--titulo); margin-top: 8px; }
+.estrela.p { width: 30px; height: 30px; } /* estrelas discretas nesta peça */
+.estrela.m { width: 42px; height: 42px; }
+@keyframes roda { to { transform: rotate(360deg); } }
+@keyframes sobe-dj { from { transform: translateY(40px); } to { transform: none; } }
+@keyframes embala { 0%, 100% { transform: none; } 50% { transform: translateY(6px) rotate(.6deg); } }

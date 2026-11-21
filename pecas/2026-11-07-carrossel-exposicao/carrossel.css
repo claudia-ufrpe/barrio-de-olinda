@@ -1,0 +1,15 @@
+/* Carrossel de agradecimento — Exposição 10 anos do Barrio. Mesmo estilo do convite: amarelo + folheto de cordel creme + gravura + faixas marrons. */
+.peca.slide { width: 1080px; height: 1350px; background: radial-gradient(110% 80% at 50% 40%, #fbd25a 0%, var(--mostarda-clara) 55%, var(--mostarda) 100%); }
+.peca.slide::before { opacity: .55; }
+.folheto { position: absolute; transform: rotate(-.8deg); box-shadow: 0 30px 60px rgba(74,42,26,.3), 0 4px 0 #e8dcbf;
+           display: flex; flex-direction: column; align-items: center; text-align: center; }
+.folheto::after { content: ""; position: absolute; inset: 14px; border: 3px solid var(--marrom); pointer-events: none; }
+.gravura { aspect-ratio: 900/560; background: url("../../marca/simbolos/xilo-barrio.svg") center / 100% 100%; }
+.logo-barrio { position: absolute; border-radius: 50%; background: var(--marrom); display: grid; place-items: center; box-shadow: 0 10px 22px rgba(74,42,26,.35); z-index: 5; }
+.logo-barrio img { width: 66%; }
+.cabeca { position: absolute; left: 0; right: 0; top: 40px; text-align: center; z-index: 2; }
+.cabeca small { display: block; font: 700 30px/1 var(--texto); letter-spacing: 6px; color: var(--marrom-medio); }
+.cabeca strong { display: inline-block; margin-top: 14px; background: var(--marrom); color: var(--creme); font: 400 58px/1 var(--cartaz); letter-spacing: 3px; padding: 20px 40px 12px; transform: rotate(-1deg); }
+.retrato { position: absolute; background: var(--creme); padding: 14px; box-shadow: 0 18px 34px rgba(74,42,26,.35); }
+.retrato img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.contador { position: absolute; left: 50px; bottom: 44px; font: 700 28px/1 var(--texto); letter-spacing: 4px; color: var(--marrom); }
